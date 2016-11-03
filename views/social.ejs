@@ -57,11 +57,21 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <% for(var i=0; i < data.dailyRewards.length; i++) { %>
+             <tr>
+              <td>
+              <%= data.dailyRewards[i].title %>
+              </td>
+              <td>
+              <img src="<%= data.dailyRewards[i].imageURL %>" alt="" border=3 height=100 width=100></img>
+              </td>
+            </tr>
+            <% } %>
+            <!-- <tr>
               <td>Lettuce</td>
               <td><img src="http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg" alt="" border=3 height=100 width=100></img></td>
-            </tr>
-            <tr>
+            </tr> -->
+            <!-- <tr>
               <td>Watermelon</td>
               <td><img src="http://foodclipart.com/food_clipart_images/a_watermelon_freshly_picked_from_the_vine_with_a_watermelon_slice_0515-0910-2901-0710_SMU.jpg" alt="" border=3 height=100 width=100></img></td>
             </tr>
@@ -72,7 +82,7 @@
             <tr>
               <td>Mint</td>
               <td><img src="http://worldartsme.com/images/mint-clipart-1.jpg" alt="" border=3 height=100 width=100></img></td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
         <table class="table table-bordered">

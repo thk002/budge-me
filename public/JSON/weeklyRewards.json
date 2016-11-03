@@ -1,166 +1,137 @@
 {
 	"weeklyItems": [
 		{
-
-					"remark": "Yeah, great job! Your reward is: ",
-							"title": "large fertilizer",
-							"imageURL": "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif",			
-							"action": "Use this to make your plants grow (x2)"
-				},
-				{
-					"remark": "Awesome, keep it up! Your reward is: ",
-					"title": "large pesticide",
-					"imageURL": "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif",			
-					"action": "Use this to get rid of pesty bugs (x2)"
-				},
-				{
-					"remark": "One of the rewards of success is freedom, the ability to do whatever you like! Your reward is: ",
-					"title": "large water",
-					"imageURL": "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif",			
-					"action": "Use this to help your plants grow (x2)"
-				},
-				{
-					"remark": "A balanced budget happens one day at a time! Your reward is: ",
-					"title": "large natural fertilizer",
-					"imageURL": "https://openclipart.org/download/172608/earthworm.svg",
-					"action": "Use this to help your plants grow (x2)"
-				},
-				{
-					"remark": "Success leaves clues, and if you sow the same seeds, you'll reap the same rewards. Your reward is: ",
-					"title": "corn",
-					"imageURL": "http://previews.123rf.com/images/hbas/hbas1004/hbas100400013/6756132-corncob-Stock-Vector-corn-plant.jpg",
-					"action": "Corn will make a nice addition to the garden"
-				},
-				{
-					"remark": "Effort only fully releases its reward after a person refuses to quit. Your reward is: ",
-					"title": "cucumber",
-					"imageURL": "http://flowers.phillipmartin.info/cucumber_plant.gif",
-					"action": "Cucumbers are now in your garden"
-				},
-				{
-					"remark": "eggplant",
-					"title": "Happiness is not a reward - it is a consequence. Suffering is not a punishment - it is a result. Your reward is: ",
-					"imageURL": "http://image.shutterstock.com/z/stock-vector-eggplants-on-the-tree-illustration-347331194.jpg",
-					"action": "Eggplant is now in your garden"
-				},
-				{
-					"remark": "The rewards for those who persevere far exceed the pain that must precede the victory. Your reward is: ",
-					"title": "tomato",
-					"imageURL": "http://4vector.com/i/free-vector-tomato-plant-clip-art_114555_Tomato_Plant_clip_art_hight.png",
-					"action": "Enjoy your new tomatoes"
-				},
-				{
-					"remark": "When we take time to notice the things that go right - it means we're getting a lot of little rewards throughout the day. Your reward is: ",
-					"title": "watermelon",
-					"imageURL": "http://foodclipart.com/food_clipart_images/a_watermelon_freshly_picked_from_the_vine_with_a_watermelon_slice_0515-0910-2901-0710_SMU.jpg",
-					"action": "Watermelon is now in your garden"
-				},
-				{
-					"remark": "What people want most of all are social rewards, especially the respect of their peers. ",
-					"title": "carrot",
-					"imageURL": "http://www.clipartlord.com/wp-content/uploads/2014/11/carrots13.png",
-					"action": "The garden now has carrots"
-				},
-				{
-					"remark": "A balanced budget happens one day at a time! Your reward is: ",
-					"title": "red bell pepper",
-					"imageURL": "http://f.tqn.com/y/webclipart/1/S/N/F/5/red-bell-pepper.png",
-					"action": "Enjoy your red bell peppers"
-				},
-				{
-					"remark": "Being in control of your finances is a great stress reliever! Your reward is: ",
-					"title": "yellow bell pepper",
-					"imageURL": "http://png.clipart.me/previews/2b9/sweet-yellow-bell-pepper-paprika-vector-free-28785.jpg",
-					"action": "Yellow bell pepper is now in your garden"
-				},
-				{
-					"remark": "One of the rewards of success is freedom, the ability to do whatever you like! Your reward is: ",
-					"title": "red pepper",
-					"imageURL": "http://www.clipartkid.com/images/336/plants-clipart-clipart-panda-free-clipart-images-3Bds5z-clipart.gif",
-					"action": "The garden now has red peppers"
-				},
-				{
-					"remark": "Awesome, keep it up! Your reward is: ",
-					"title": "cilantro",
-					"imageURL": "http://cdn.grid.fotosearch.com/CSP/CSP192/k25312867.jpg",
-					"action": "Cilantro is now in your garden"
-				},
-				{
-					"remark": "Yeah, great job! Your reward is: ",
-					"title": "basil",
-					"imageURL": "http://www.clipartkid.com/images/270/basil-20clipart-clipart-panda-free-clipart-images-kNq4AO-clipart.jpg",
-					"action": "Enjoy your new basil"
-				},
-				{
-					"remark": "It takes a village to make this garden! Your reward is: ",
-					"item": [
-						{
-							"title": "mint",
-							"imageURL": "http://worldartsme.com/images/mint-clipart-1.jpg",
-							"action": "Mint is now in your garden"
-						}
-					]
-				},
-				{
-					"remark": "Keep calm and save money. Your reward is: ",
-					"item": [
-						{
-							"title": "blueberries",
-							"imageURL": "http://worldartsme.com/images/blueberry-free-clipart-1.jpg",
-							"action": "Enjoy the new blueberries"
-						}
-					]
-				},
-				{
-					"remark": "Set goals that are achievable and know what motivates you and stay focused on that. Your reward is: ",
-					"item": [
-						{
-							"title": "strawberries",
-							"imageURL": "http://www.clipartkid.com/images/366/strawberries-clip-art-at-clker-com-vector-clip-art-online-royalty-OnTw5V-clipart.png",
-							"action": "Your garden now has strawberries"
-						}
-					]
-				},
-				{
-					"remark": "If you're looking for immediate rewards, you're only looking for the money. Today you saw past that! Your reward is: ",
-					"item": [
-						{
-							"title": "grapevine",
-							"imageURL": "http://www.clipartlord.com/wp-content/uploads/2016/03/grapes12.png",
-							"action": "Grapes are now in your garden"
-						}
-					]
-				},
-				{
-					"remark": "I've usually found that the greatest rewards in my life come from taking on things that are a little bit scary. Your reward is: ",
-					"item": [
-						{
-							"title": "leeks",
-							"imageURL": "http://media.istockphoto.com/vectors/leek-and-flower-vector-id543473878?k=6&m=543473878&s=170667a&w=0&h=Zgajv-_nzKUQzJo9S0pK71LozldS4uokcYDmKpyYOEk=",
-							"action": "Leeks are now in your garden"
-						}
-					]
-				}
-				{
-					"remark": "What I am suggesting is hard work and it can be slow work, but the rewards are well worth it. Your reward is: ",
-					"item": [
-						{
-							"title": "saffron",
-							"imageURL": "http://vector.me/files/images/7/1/714784/anemone_patens_clip_art.jpg",
-							"action": "Enjoy your new saffron blossom"
-						}
-					]
-				}
-				{
-					"remark": "In nature there are neither rewards nor punishments; there are consequences. Ok but we think you deserve something, your reward is: ",
-					"item": [
-						{
-							"title": "pineapple",
-							"imageURL": "http://images.clipartpanda.com/pineapple-clipart-black-and-white-jTx8xp8TE.png",
-							"action": "Pineapple is now in your garden"
-						}
-					]
-				}
+			"remark": "Yeah, great job! Your reward is: ",
+			"title": "large fertilizer",
+			"imageURL": "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif",			
+			"action": "Use this to make your plants grow (x2)"
+		},
+		{
+			"remark": "Awesome, keep it up! Your reward is: ",
+			"title": "large pesticide",
+			"imageURL": "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif",			
+			"action": "Use this to get rid of pesty bugs (x2)"
+		},
+		{
+			"remark": "One of the rewards of success is freedom, the ability to do whatever you like! Your reward is: ",
+			"title": "large water",
+			"imageURL": "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif",			
+			"action": "Use this to help your plants grow (x2)"
+		},
+		{
+			"remark": "A balanced budget happens one day at a time! Your reward is: ",
+			"title": "large natural fertilizer",
+			"imageURL": "https://openclipart.org/download/172608/earthworm.svg",
+			"action": "Use this to help your plants grow (x2)"
+		},
+		{
+			"remark": "Success leaves clues, and if you sow the same seeds, you'll reap the same rewards. Your reward is: ",
+			"title": "corn",
+			"imageURL": "http://previews.123rf.com/images/hbas/hbas1004/hbas100400013/6756132-corncob-Stock-Vector-corn-plant.jpg",
+			"action": "Corn will make a nice addition to the garden"
+		},
+		{
+			"remark": "Effort only fully releases its reward after a person refuses to quit. Your reward is: ",
+			"title": "cucumber",
+			"imageURL": "http://flowers.phillipmartin.info/cucumber_plant.gif",
+			"action": "Cucumbers are now in your garden"
+		},
+		{
+			"remark": "eggplant",
+			"title": "Happiness is not a reward - it is a consequence. Suffering is not a punishment - it is a result. Your reward is: ",
+			"imageURL": "http://image.shutterstock.com/z/stock-vector-eggplants-on-the-tree-illustration-347331194.jpg",
+			"action": "Eggplant is now in your garden"
+		},
+		{
+			"remark": "The rewards for those who persevere far exceed the pain that must precede the victory. Your reward is: ",
+			"title": "tomato",
+			"imageURL": "http://4vector.com/i/free-vector-tomato-plant-clip-art_114555_Tomato_Plant_clip_art_hight.png",
+			"action": "Enjoy your new tomatoes"
+		},
+		{
+			"remark": "When we take time to notice the things that go right - it means we're getting a lot of little rewards throughout the day. Your reward is: ",
+			"title": "watermelon",
+			"imageURL": "http://foodclipart.com/food_clipart_images/a_watermelon_freshly_picked_from_the_vine_with_a_watermelon_slice_0515-0910-2901-0710_SMU.jpg",
+			"action": "Watermelon is now in your garden"
+		},
+		{
+			"remark": "What people want most of all are social rewards, especially the respect of their peers. ",
+			"title": "carrot",
+			"imageURL": "http://www.clipartlord.com/wp-content/uploads/2014/11/carrots13.png",
+			"action": "The garden now has carrots"
+		},
+		{
+			"remark": "A balanced budget happens one day at a time! Your reward is: ",
+			"title": "red bell pepper",
+			"imageURL": "http://f.tqn.com/y/webclipart/1/S/N/F/5/red-bell-pepper.png",
+			"action": "Enjoy your red bell peppers"
+		},
+		{
+			"remark": "Being in control of your finances is a great stress reliever! Your reward is: ",
+			"title": "yellow bell pepper",
+			"imageURL": "http://png.clipart.me/previews/2b9/sweet-yellow-bell-pepper-paprika-vector-free-28785.jpg",
+			"action": "Yellow bell pepper is now in your garden"
+		},
+		{
+			"remark": "One of the rewards of success is freedom, the ability to do whatever you like! Your reward is: ",
+			"title": "red pepper",
+			"imageURL": "http://www.clipartkid.com/images/336/plants-clipart-clipart-panda-free-clipart-images-3Bds5z-clipart.gif",
+			"action": "The garden now has red peppers"
+		},
+		{
+			"remark": "Awesome, keep it up! Your reward is: ",
+			"title": "cilantro",
+			"imageURL": "http://cdn.grid.fotosearch.com/CSP/CSP192/k25312867.jpg",
+			"action": "Cilantro is now in your garden"
+		},
+		{
+			"remark": "Yeah, great job! Your reward is: ",
+			"title": "basil",
+			"imageURL": "http://www.clipartkid.com/images/270/basil-20clipart-clipart-panda-free-clipart-images-kNq4AO-clipart.jpg",
+			"action": "Enjoy your new basil"
+		},
+		{
+			"remark": "It takes a village to make this garden! Your reward is: ",
+			"title": "mint",
+			"imageURL": "http://worldartsme.com/images/mint-clipart-1.jpg",
+			"action": "Mint is now in your garden"
+		},
+		{
+			"remark": "Keep calm and save money. Your reward is: ",
+			"title": "blueberries",
+			"imageURL": "http://worldartsme.com/images/blueberry-free-clipart-1.jpg",
+			"action": "Enjoy the new blueberries"
+		},
+		{
+			"remark": "Set goals that are achievable and know what motivates you and stay focused on that. Your reward is: ",
+			"title": "strawberries",
+			"imageURL": "http://www.clipartkid.com/images/366/strawberries-clip-art-at-clker-com-vector-clip-art-online-royalty-OnTw5V-clipart.png",
+			"action": "Your garden now has strawberries"
+		},
+		{
+			"remark": "If you're looking for immediate rewards, you're only looking for the money. Today you saw past that! Your reward is: ",
+			"title": "grapevine",
+			"imageURL": "http://www.clipartlord.com/wp-content/uploads/2016/03/grapes12.png",
+			"action": "Grapes are now in your garden"
+		},
+		{
+			"remark": "I've usually found that the greatest rewards in my life come from taking on things that are a little bit scary. Your reward is: ",
+			"title": "leeks",
+			"imageURL": "http://media.istockphoto.com/vectors/leek-and-flower-vector-id543473878?k=6&m=543473878&s=170667a&w=0&h=Zgajv-_nzKUQzJo9S0pK71LozldS4uokcYDmKpyYOEk=",
+			"action": "Leeks are now in your garden"
+		}
+		{
+			"remark": "What I am suggesting is hard work and it can be slow work, but the rewards are well worth it. Your reward is: ",
+			"title": "saffron",
+			"imageURL": "http://vector.me/files/images/7/1/714784/anemone_patens_clip_art.jpg",
+			"action": "Enjoy your new saffron blossom"
+		}
+		{
+			"remark": "In nature there are neither rewards nor punishments; there are consequences. Ok but we think you deserve something, your reward is: ",
+			"title": "pineapple",
+			"imageURL": "http://images.clipartpanda.com/pineapple-clipart-black-and-white-jTx8xp8TE.png",
+			"action": "Pineapple is now in your garden"
+		}
 	]
 }
 

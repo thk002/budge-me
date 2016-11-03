@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/Stylesheet.css"/>
+    <title>Budget</title>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <ul class="nav nav-tabs nav-justified">
+          <li class="tab-active nav-tabs"><a href="/index">Garden</a></li>
+          <li class="nav-tabs"><a href="/social">Social</a></li>
+          <li class="nav-tabs"><a href="/budget">Budget</a></li>
+          <li class="nav-tabs"><a href="/settings">Settings</a></li>
+      </ul>
+    </div>
+    
+    <div class="container" id="budget">
+      <ul id ="items">
+        <li class="budg-item"> Weekly Budget <span id="itemName"></span>
+          <input type="range" class="slider" min="0" max="250" value="0" step="5" oninput="showValue(1,this.value)" />
+          <span id="range1"><!-- Updated value -->0</span>
+        </li>
+
+        <li class="budg-item"> Groceries
+          <input type="range" class="slider" min="0" max="50" value="0" step="10" oninput="showValue(2, this.value)" />
+          <span id="range2">0</span>
+        </li>
+
+        <li class="budg-item"> Fast Food 
+          <input type="range" class="slider" min="0" max="50" value="0" step="10" oninput="showValue(3,this.value)" />
+          <span id="range3">0</span>
+        </li>
+
+        <li class="budg-item" id="defaultItems"> Entertainment 
+          <input type="range" class="slider" min="0" max="50" value="0" step="10" oninput="showValue(4,this.value)" />
+          <span id="range4">0</span>
+        </li>
+
+        <!-- Be able to input category whichs appends this li item -->
+        <button><a href="#" id="new-cat">Add Category</a></button>
+      </ul>
+    </div>  
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/javascript.js"></script>
+  </body>
+</html>
+
+

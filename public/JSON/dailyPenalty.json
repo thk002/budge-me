@@ -1,0 +1,116 @@
+{
+	"dailyPenalty": [
+		{
+			"remark": "Oh well, tomorrow is another day! Since you did not stay in budget you get: ",
+			"item": [
+				{
+					"title": "ants",
+					"imageURL": "http://cliparting.com/wp-content/uploads/2016/10/Ants-clipart-clipart.jpg",			
+					"action": "Ewww! Ants have infested your garden"
+				}
+			]
+		},
+		{
+			"remark": "Oh no you'll have to do better next time! Since you did not stay in budget today you get: ",
+			"item": [
+				{
+					"title": "caterpillars",
+					"imageURL": "https://pixabay.com/static/uploads/photo/2012/04/18/00/21/caterpillar-36248_960_720.png",
+					"action": "Caterpillars will eat your plants, hurry up and get rid of them!"
+				}
+			]
+
+		},
+		{
+			"remark": "Come on you can do better next time! Since you did not stay in budget you get: ",
+			"item": [
+				{
+					"title": "aphids",
+					"imageURL": "http://images.clipartpanda.com/bug-clipart-bug-clipart-03.jpg",
+					"action": "Aphids have infested your garden"			
+				}
+			]
+		},
+		{
+			"remark": "Come on you can do better next time! Since you did not stay in budget you get: ",
+			"item": [
+				{
+					"title": "snails",
+					"imageURL": "http://images.clipartpanda.com/snail-clip-art-MTLd7EaTa.png",
+					"action": "Yuck snails are gooing up your garden! Don't let them eat your plants"			
+				}
+			]
+		},
+		{
+			"remark": "Come on you can do better next time! Since you did not stay in budget today you get: ",
+			"item": [
+				{
+					"title": "grasshoppers",
+					"imageURL": "https://clipartion.com/wp-content/uploads/2015/11/grasshopper-drawing-outline-free-clipart-images-830x467.jpg",			
+					"action": "Ahhh grasshoppers are eating your plants"
+				}
+			]
+		},
+		{
+			"remark": "Learn from yesterday, live for today, hope for tomorrow! Since you did not stay in budget you get: ",
+			"item": [
+				{
+					"title": "weeds",
+					"imageURL": "http://www.clipartkid.com/images/163/flower-dandelion-clip-art-at-clker-com-vector-clip-art-online-G4CEXy-clipart.png",			
+					"action": "Oh no weeds are stealing water and fertilizer nutrients from your plants"
+				}
+			]
+		},
+		{
+			"name": "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails. Since you did not stay in budget you get: ",
+			"item": [
+				{
+					"title": "fungus",
+					"imageURL": "http://cliparts.co/cliparts/KLT/d4n/KLTd4nai4.png",
+					"action": "Oh my your plants are sprouting mushrooms! Hurry up and get rid of them"
+				}
+			]
+		},
+		{
+			"name": "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails. Since you did not stay in budget you get: ",
+			"item": [
+				{
+					"title": "crow",
+					"imageURL": "http://images.clipartpanda.com/crow-clip-art-crow-clip-art-12.jpg",
+					"action": "Oh no the crow is eating your garden"
+				}
+			]				
+		}
+	]
+}
+
+	//Prove it to yourself, do it for yourself!
+	//In nature there are neither rewards nor punishments; there are consequences. 
+	//Notice the small things. The rewards are inversely proportional.
+	//There are no rewards or punishments - only consequences. 
+	//What I am suggesting is hard work and it can be slow work, but the rewards are well worth it. 
+	//We all learned how to walk and talk by interacting with our environment, with real goals and rewards. Now let's learn how to budget...
+	//I've usually found that the greatest rewards in my life come from taking on things that are a little bit scary. 
+	// If you're looking for immediate rewards, you're only looking for the money. 
+	//Had too much fun, too many rewards. 
+	// Set goals that are achievable and know what motivates you and stay focused on that.
+	//Keep calm and save money.
+	//It takes a village to make this garden! 
+
+	//Success leaves clues, and if you sow the same seeds, you'll reap the same rewards. 
+	//Effort only fully releases its reward after a person refuses to quit.
+	//The reward of a thing well done is having done it. 
+	//Happiness is not a reward - it is a consequence. Suffering is not a punishment - it is a result. 
+	// The rewards for those who persevere far exceed the pain that must precede the victory. 
+	//When we take time to notice the things that go right - it means we're getting a lot of little rewards throughout the day. 
+	//What people want most of all are social rewards, especially the respect of their peers. 
+
+
+	//This joy of discovery is real, and it is one of our rewards. So too is the approval of our work by our peers. 
+	//Every project has challenges, and every project has its rewards. 
+	//Giving credit where credit is due is a very rewarding habit to form. Its rewards are inestimable. 
+	//Serendipity always rewards the prepared. 
+	//Balance is if you try hard and you work hard, then the rewards are that what you put in and what is what you get out of it.
+
+
+}

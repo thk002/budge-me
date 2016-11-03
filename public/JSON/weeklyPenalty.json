@@ -1,0 +1,78 @@
+{
+	"weeklyPenalty": [
+	//randomize items selected as reward/punshiment
+	//randomize the garden item that is effected (probably just plants but maybe resources as well, i.e. water)
+		{
+			"remark": "Prove it to yourself, do it for yourself! Since you did not stay in budget today you get: ",
+			"title": "goat",
+			"imageURL": "http://images.clipartpanda.com/goat-clip-art-clip-art-goats-445410.jpg",			
+			"action": "A goat broke into the garden"
+			//"action": "A goat broke into the garden and ate {gardenItem}"
+		},
+		{
+			"remark": "Notice the small things. The rewards are inversely proportional. Since you did not stay in budget today you get: ",
+			"title": "deer",
+			"imageURL": "http://niceclipart.com/wp-content/uploads/2016/07/Deer-clipart-4.png",			
+			"action": "A deer got into your garden"
+		},
+		{
+			"remark": "There are no rewards or punishments - only consequences.  Since you did not stay in budget today you get: ",
+			"title": "cow",
+			"imageURL": "https://clipartion.com/wp-content/uploads/2015/12/cow-clip-art-images-free-for-commercial-use1.png",			
+			"action": "A cow got into your garden"
+		},
+		{
+			"remark": "We all learned how to walk and talk by interacting with our environment, with real goals and rewards. Now let's learn how to budget...Since you did not stay in budget today you get: ",
+			"title": "pig",
+			"imageURL": "http://images.clipartpanda.com/pig-clip-art-pig-clipart-1.gif",			
+			"action": "A pig got into your garden"
+		},
+		{
+			"remark": "If you're looking for immediate rewards, you're only looking for the money. Since you did not stay in budget today you get: ",
+			"title": "bleach",
+			"imageURL": "http://blurbrain.com/wp-content/uploads/2014/09/clorox-bleach.jpg",			
+			"action": "Bleach got poured on your garden, loose two items"
+				}
+			]
+		},
+		{
+			"remark": "If you're looking for immediate rewards, you're only looking for the money.  Since you did not stay in budget today you get: ",
+			"title": "fire",
+			"imageURL": "http://images.clipartpanda.com/fire-clipart-cliparti1-fire-clip-art.jpg",			
+			"action": "A fire has burnt your garden, loose two items"
+					// "action": "A fire has burnt your garden, use water or loose two items"
+		}
+	]
+}
+//May eventually use this collection of phrases to randomize the remarks for each item
+
+	//Prove it to yourself, do it for yourself!
+	//In nature there are neither rewards nor punishments; there are consequences. 
+	//Notice the small things. The rewards are inversely proportional.
+	//There are no rewards or punishments - only consequences. 
+	//What I am suggesting is hard work and it can be slow work, but the rewards are well worth it. 
+	//We all learned how to walk and talk by interacting with our environment, with real goals and rewards. Now let's learn how to budget...
+	//I've usually found that the greatest rewards in my life come from taking on things that are a little bit scary. 
+	// If you're looking for immediate rewards, you're only looking for the money. 
+	//Had too much fun, too many rewards. 
+	// Set goals that are achievable and know what motivates you and stay focused on that.
+	//Keep calm and save money.
+	//It takes a village to make this garden! 
+
+	//Success leaves clues, and if you sow the same seeds, you'll reap the same rewards. 
+	//Effort only fully releases its reward after a person refuses to quit.
+	//The reward of a thing well done is having done it. 
+	//Happiness is not a reward - it is a consequence. Suffering is not a punishment - it is a result. 
+	// The rewards for those who persevere far exceed the pain that must precede the victory. 
+	//When we take time to notice the things that go right - it means we're getting a lot of little rewards throughout the day. 
+	//What people want most of all are social rewards, especially the respect of their peers. 
+
+
+	//This joy of discovery is real, and it is one of our rewards. So too is the approval of our work by our peers. 
+	//Every project has challenges, and every project has its rewards. 
+	//Giving credit where credit is due is a very rewarding habit to form. Its rewards are inestimable. 
+	//Serendipity always rewards the prepared. 
+	//Balance is if you try hard and you work hard, then the rewards are that what you put in and what is what you get out of it.
+
+
+}

@@ -3,7 +3,7 @@ var router = express.Router();
 var fs = require("fs");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/index', function(req, res, next) {
   res.render('index');
 });
 /* GET social page. */
@@ -17,7 +17,7 @@ router.get('/budget', function(req, res, next) {
   res.render('budget');
 });
 /* GET login page. */
-router.get('/login', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.render('login');
 });
 /* GET setting page. */

@@ -1,8 +1,37 @@
+
 var counter = 4;
+
+var dailyRewards = 'public/JSON/dailyRewards.json';
+var dailyRewardsString = dailyJSON.readFile(dailyRewards, function(err, obj) {
+	  console.log(obj);
+	});
 
 $(document).ready(function() {
 	initializePage();
 });
+module.exports = {
+  getItem: function () {
+  	console.log("1");
+	var reward = $("#yesDaily"); //points to yes button
+	console.log("2");
+  },
+  pickRandomItem: function () {
+    var obj_keys = dailyRewardsString.keys(window.questionnaire);
+    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+    window.selectedquestion = window.questionnaire[ran_key];
+    console.log(window.selectedquestion);
+    console.log(window.questionnaire);
+  }
+};
+
+
+function pickRandomItem(){
+        var obj_keys = dailyRewardsString.keys(window.questionnaire);
+        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+        window.selectedquestion = window.questionnaire[ran_key];
+        console.log(window.selectedquestion);
+        console.log(window.questionnaire);
+}
 
 function initializePage() {
 $("#new-cat").click(projectClick);
@@ -18,7 +47,7 @@ function projectClick(e) {
 }
 
 function addFriend() {
-$("#add-friend").click(projectClick);
+	$("#add-friend").click(projectClick);
 }
 
 function projectClick(e) {
@@ -31,8 +60,8 @@ function projectClick(e) {
 }
 
 function yesClick() {
-		console.log("yesClick");
-$('#yesButton').click(getItem);
+	console.log("yesClick");
+	$('#yesButton').click(getItem);
 }
 
 // var dailyRewards = JSON.parse(JSON/dailyRewards.json);
@@ -45,23 +74,44 @@ $('#yesButton').click(getItem);
 // alert(dailyRewards[0].action);
 // }
 
-function getItem() {
-		console.log("1");
-	var reward = $("#yesDaily"); //points to yes button
-		console.log("2");
+// function getItem() {
+// 	console.log("1");
+// 	var reward = $("#yesDaily"); //points to yes button
+// 	console.log("2");
+
+
 	// var daily= $.getJSON("/public/JSON/dailyRewards.json");
-	var daily = JSON.parse("public/JSON/dailyRewards.json");
-	var keyArray = $.map(daily, function (value, key) { 
-		console.log(key);
-		return key; 
-			console.log("map");
-	}); //get array from JSON file
-	 keyArray = shuffle(keyArray);
-	 keyArray[0]; //get item
-	 console.log(keyArray[0]);
-	var jsonObj= JSON.stringify(daily);
-	console.log("4" + jsonObj);
-}
+	// var daily = JSON.parse("/public/JSON/dailyRewards.json", 
+	
+	// var json = (function() { 
+	// 	var json = null; 
+	// 	$.ajax({ 
+	// 	'async': false, 
+	// 	'global': false, 
+	// 	'url': "/public/JSON/dailyRewards.json.json", 
+	// 	'dataType': "json", 
+	// 	'success': function (data) {
+	// 	 json = data; }
+	// 	 }); 
+
+	// var dailyR = [];
+
+	// $.get("/public/JSON/dailyRewards.json", function( data){
+	//  	dailyR = data;
+	//  	console.log(dailyR);
+	// 	});
+
+	// var keyArray = $.map(daily, function (value, key) { 
+	// 	console.log(key);
+	// 	return key; 
+	// 		console.log("map");
+	// }); //get array from JSON file
+	//  keyArray = shuffle(keyArray);
+	//  keyArray[0]; //get item
+	//  console.log(keyArray[0]);
+	// var jsonObj= JSON.stringify(daily);
+	// console.log("4" + jsonObj);
+// }
 
 function shuffle(array) {
   var currentIndex = array.length, temp, randIndex;

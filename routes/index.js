@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var fs = require('fs');
-
+var fs = require("fs");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,11 +8,10 @@ router.get('/', function(req, res, next) {
 });
 /* GET social page. */
 router.get('/social', function(req, res, next) {
-
-  var daily = JSON.parse(fs.readFileSync('public/JSON/dailyRewards.json', 'utf8'));
-  res.render('social', {daily: daily});
+  var daily = JSON.parse(fs.readFileSync("public/JSON/dailyRewards.json", 'utf8'));
+  res.render('social', {data: daily});
+  
 });
-
 /* GET budget page. */
 router.get('/budget', function(req, res, next) {
   res.render('budget');

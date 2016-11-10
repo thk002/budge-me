@@ -5,7 +5,6 @@ $(document).ready(function() {
 	initializePage();
 })
 
-
 function initializePage() {
 
 $("#new-cat").click(projectClick);

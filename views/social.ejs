@@ -46,12 +46,13 @@
 
           <script type="javascript">
           $(document).ready(function(){
-    var obj = <%= daily %>;
+    var obj = <%= daily.dailyRewards %>;
   });
           </script>
 
-          <button id="#yesDaily" onClick="getItem()">Yes</button>
+
 <!-- QUESTONS ------------------------------------- -->
+          <button id="#yesDaily" onClick="pickRandomItem()">Yes</button>
           <button><a href="/TBD">No</a></button>
           
           <p>Did you spend no more than $200 this week?</p>
@@ -74,13 +75,13 @@
           <tbody>
             <!--Changed data to daily-->
             <!--if type == plant -->
-            <% for(var i=1; i < 7; i+=1) { %>
+            <% for(var i=0; i < daily.dailyRewards.length; i++) { %>
              <tr>
               <td>
-              <%= daily[i].title %>
+              <%= daily.dailyRewards[i].title %>
               </td>
               <td>
-              <img src="<%= daily[i].imageURL %>" alt="" border=3 height=100 width=100></img>
+              <img src="<%= daily.dailyRewards[i].imageURL %>" alt="" border=3 height=100 width=100></img>
               </td>
             </tr>
             <% } %>
@@ -136,7 +137,8 @@
         </div>
       </div>
     </div>
-    <script src="/public/JSON/dailyRewards.json"></script>
+    <!-- // <script src="/public/JSON/dailyRewards.json"></script> -->
     <script src="js/javascript.js"></script>
+    <script src="routes/index.js"></script>
   </body>
 </html>

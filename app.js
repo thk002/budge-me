@@ -1,3 +1,5 @@
+
+/* IMPORTS ----------------------------------------------*/
 //Require the needed modules and create the app variable
 var express = require('express');
 var path = require('path');
@@ -5,13 +7,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-
 var index = require('./routes/index');
 var users = require('./routes/users');
+var dailyJSON = require('jsonfile');
+var js = require('./public/js/javascript')
 
 var app = express();
 
+
+/* APP SETUP ----------------------------------------------*/
 //Set up the app to serve whatever is in the views folder at the url 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -23,7 +27,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', index);
 app.use('/users', users);
 
@@ -44,6 +47,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+/* PARSING JSON----------------------------------------------*/
+console.log(typeof js.getItem);
+
 
 
 module.exports = app;

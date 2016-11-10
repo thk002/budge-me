@@ -1,11 +1,15 @@
+
 var counter = 4;
 
 $(document).ready(function() {
 	initializePage();
-});
+})
+
 
 function initializePage() {
+
 $("#new-cat").click(projectClick);
+
 }
 
 function projectClick(e) {
@@ -17,72 +21,6 @@ function projectClick(e) {
 	$("#defaultItems").append("<li class='budg-item'>" +category+"<input type='range' class='slider' min='0' max='50' value='0' step='10' oninput='showValue("+counter+", this.value)' /><span id='range" + counter + "'>0</span></li>");
 }
 
-function addFriend() {
-$("#add-friend").click(projectClick);
-}
-
-function projectClick(e) {
-	e.preventDefault();
-	var category = $('#add-friend');
-	var item = $("#friend");
-	console.log(category);
-	counter++;
-	$("#defaultItems").append("New Friend");
-}
-
-function yesClick() {
-		console.log("yesClick");
-$('#yesButton').click(getItem);
-}
-
-// var dailyRewards = JSON.parse(JSON/dailyRewards.json);
-// for(i=0;i<dailyRewrds.length;i++) {
-// alert(dailyRewards[0]);
-// alert(dailyRewards[0].type);
-// alert(dailyRewards[0].remark);
-// alert(dailyRewards[0].title);
-// alert(dailyRewards[0].imageURL);
-// alert(dailyRewards[0].action);
-// }
-
-function getItem() {
-		console.log("1");
-	var reward = $("#yesDaily"); //points to yes button
-		console.log("2");
-	// var daily= $.getJSON("/public/JSON/dailyRewards.json");
-	var daily = JSON.parse("public/JSON/dailyRewards.json");
-	var keyArray = $.map(daily, function (value, key) { 
-		console.log(key);
-		return key; 
-			console.log("map");
-	}); //get array from JSON file
-	 keyArray = shuffle(keyArray);
-	 keyArray[0]; //get item
-	 console.log(keyArray[0]);
-	var jsonObj= JSON.stringify(daily);
-	console.log("4" + jsonObj);
-}
-
-function shuffle(array) {
-  var currentIndex = array.length, temp, randIndex;
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randIndex];
-    array[randIndex] = temp;
-  }
-
-  return array;
-}
-
-
 function showValue(element, newValue)
 {
 
@@ -90,7 +28,7 @@ function showValue(element, newValue)
 	//access element in database using @element, update value with newValue 
 }
 
- // data = '[{"name" : "Ashwin", "age" : "20"},{"name" : "Abhinandan", "age" : "20"}]';
+// data = '[{"name" : "Ashwin", "age" : "20"},{"name" : "Abhinandan", "age" : "20"}]';
 // var mydata = JSON.parse(data);
 // document.getElementById("itemName").innerHTML=mydata[0].name;
 

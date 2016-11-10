@@ -14,7 +14,7 @@ $("#new-cat").click(projectClick);
 
 function projectClick(e) {
 	e.preventDefault();
-	var category = $('#new-cat');
+	var category = document.getElementById("cname").value;
 	var item = $("#items");
 	console.log(category);
 	counter++;

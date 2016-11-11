@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+#garden-img, #empty-garden {
+	position: relative;
+	width: 1200px;
+	height: 615px;
+}
+
+#newImg {
+	max-width: 130px;
+	max-height: 130px;
+	position: absolute;
+	top: 30px;
+	left: 50px;
+}

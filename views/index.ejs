@@ -2,44 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Budge Me: Home</title>
   </head>
-  <body onload="startGame()">
+  <body>
 
     <ul class="nav nav-tabs nav-justified">
       <li class="tab-active nav-tabs"><a href="/">Garden</a></li>
       <li class="nav-tabs"><a href="/social">Social</a></li>
       <li class="nav-tabs"><a href="/budget">Budget</a></li>
+      <li class="nav-tabs"><a href="/settings">Settings</a></li>
     </ul>
-
-    <div class="home-img">
-
-      <h1 id="garden-name"><span>Simpson's Garden</span></h1>
-
-      <hr>
-
-      <ul>
-        <li><h2><span>Garden Status</span></h2<></li>
-        <li><span>!Under attack from hungry goat!</span></li>
-        <li><span>Use 2 more fertilizers to max out growth <br/>Fertilizers: 3/5</span></li>
-        <li><span>All the bugs are dead! Awesome!<br/>Bugs: 0/5</span></li>
-      </ul>
-
-      <hr>
-
-      <ul id="task-list">
-        <li><h2><span>Ongoing Tasks</span></h2></li>
-        <li><span>Spend less than $50 on boba this week.<br/>Reward: x1 Fertilizer</span></li>
-        <li><span>Spend less than $100 on Entertainment this week.<br/>Reward: x1 Pesticide</span></li>
-      </ul>
+    <div>
+      <h1 id="garden-name">Simpson's Garden</h1>
+      <div id="garden-img">
+        <img src="/images/emptyGarden.jpg" id="empty-garden"/>
+      </div>
+      <h2> Check out the Social page to use items for your garden! </h2>
     </div>
-
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/javascript.js"></script>
   </body>
 </html>

@@ -15,13 +15,13 @@
           <li class="tab-active nav-tabs"><a href="/">Garden</a></li>
           <li class="nav-tabs"><a href="/social">Social</a></li>
           <li class="nav-tabs"><a href="/budget">Budget</a></li>
-          <li class="nav-tabs"><a href="/settings">Settings</a></li>
       </ul>
     </div>
     
     <div class="container" id="budget">
       <ul id ="items">
         <p></p>
+        <p>*Use the sliders to control the amount of money you want to set as your budget for each category. To add a new category, fill in the form at the bottom. If you want to delete a category, use the remove button.</p>
         <li class="budg-item"> Weekly Budget <span id="itemName"></span> <span class="delete"><button>Remove</button></span>
           <input type="range" class="slider" min="0" max="250" value="0" step="5" oninput="showValue(1,this.value)" />
           <span id="range1"><!-- Updated value -->0</span>

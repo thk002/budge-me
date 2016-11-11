@@ -1,46 +1,53 @@
 {
 	"dailyRewards": [
 		{
+			"type": "fertilizer",
 			"remark": "Yeah, great job! Your reward is: ",
 			"title": "small fertilizer",
 			"imageURL": "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif",			
 			"action": "Use this to make your plants grow"
 		},
 		{
+			"type": "pesticide",
 			"remark": "Awesome, keep it up! Your reward is: ",
 			"title": "small pesticide",
 			"imageURL": "http://www.clipartkid.com/images/349/pesticidesymptoms-of-poisoning-list-of-banned-pesticides-in-japan-DTEP1y-clipart.bmp",			
 			"action": "Use this to get rid of pesty bugs"
 		},
-		{
+		 {
+			"type": "water",
 			"remark": "One of the rewards of success is freedom, the ability to do whatever you like! Your reward is: ",
 			"title": "small water",
 			"imageURL": "http://www.clipartkid.com/images/512/11-cartoon-watering-can-free-cliparts-that-you-can-download-to-you-2VEZbZ-clipart.gif",			
 			"action": "Use this to help your plants grow"
 		},
 		{
+			"type": "plant",
 			"remark": "Being in control of your finances is a great stress reliever! Your reward is: ",
 			"title": "lettuce",
 			"imageURL": "http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg",
 			"action": "Lettuce is easy to grow and good to eat, add it to your garden"
 		},
 		{
+			"type": "fertilizer",
 			"remark": "A balanced budget happens one day at a time! Your reward is: ",
 			"title": "natural fertilizer",
 			"imageURL": "https://openclipart.org/download/172608/earthworm.svg",
 			"action": "Use this to help your plants grow"
 		},
 		{
+			"type": "pesticide",
 			"remark": "Not all bugs are equal! Your reward is: ",
 			"title": "lady bugs",
 			"imageURL": "http://images.clipartpanda.com/bug-clipart-bug-clipart-09.jpg",
 			"action": "Use this ladybug to get eat bugs in the garden"
 		},
 		{
+			"type": "pesticide",
 			"remark": "The reward of a thing well done is having done it. Your reward is: ",
 			"title": "scarecrow",
 			"imageURL": "http://images.clipartpanda.com/scarecrow-clip-art-scarecrow-clip-art-3.gif",
-			"action": "Use this to scare away any birds in the garden"
+			"action": "Use this to scare away any birds and pests in the garden"
 		}
 	]
 }

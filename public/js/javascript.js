@@ -78,6 +78,19 @@ function itemImage(itemName) {
 	  console.log(itemName);
 	  return "http://images.clipartpanda.com/scarecrow-clip-art-scarecrow-clip-art-3.gif";
 	}
+		else if (itemName == "ants") {
+	  console.log(itemName);
+	  return "http://cliparting.com/wp-content/uploads/2016/10/Ants-clipart-clipart.jpg";
+	}
+		else if (itemName == "goat") {
+	  console.log(itemName);
+	  return "http://images.clipartpanda.com/goat-clip-art-clip-art-goats-445410.jpg";
+	}
+		else if (itemName == "large fertilizer") {
+	  console.log(itemName);
+	  return "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif";
+	}
+	
 };
 
 //function for when item is clicked to update garden picture

@@ -26,24 +26,18 @@
       <h2>Garden Status</h2>
       <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#home">Status</a></li>
-        <li><a data-toggle="tab" href="#menu1">Quests</a></li>
-        <li><a data-toggle="tab" href="#menu2">Items</a></li>
-        <li><a data-toggle="tab" href="#menu3">Friends</a></li>
+        <li><a data-toggle="tab" href="#menu1">Items</a></li>
+        <li><a data-toggle="tab" href="#menu2">Friends</a></li>
       </ul>
 
-<!-- TEAM STATUS ------------------------------------- -->
+      <!-- TEAM STATUS ------------------------------------- -->
       <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
           <h3>Team Status</h3>
-          <p>Under Attack: Hungry Goat!</p>
-          <p>Player 3 did not meet their budget</p>
-          <p>Hurry up and clear the goat</p>
-        </div>
-        <div id="menu1" class="tab-pane fade">
-          <h2>Have you been keeping up with your budget?</h2>
-
-<!-- QUESTONS ------------------------------------- -->
-          
+          <p><%= daily[0].remark %> <%= daily[0].title %> </p>
+          <p><%= daily[0].action %></p>
+        <!-- QUESTONS ------------------------------------- -->
+          <h2>Have you been keeping up with your budget?</h2>        
           <form action="/items">
             <p>Did you spend no more than $5 on boba today?</p><br>
               <input type="radio" name="daily" value="yes"> Yes
@@ -58,10 +52,10 @@
             <input type="submit" value="Submit">
           </form>
         </div>
-        <div id="menu2" class="tab-pane fade">
+        <!-- ITEMS ------------------------------------- -->
+        <div id="menu1" class="tab-pane fade">
           <h3>Garden Items</h3>
           <p>Check Out Your Garden:</p>
-       
         <table class="table table-bordered">
           <thead>
             <tr>
@@ -115,7 +109,7 @@
           <!-- </thead> -->
         <!-- </table> -->
         </div>
-        <div id="menu3" class="tab-pane fade">
+        <div id="menu2" class="tab-pane fade">
           <h3>Friends</h3>
           <ul>
             <li>My Team</li>

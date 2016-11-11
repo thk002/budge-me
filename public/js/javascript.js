@@ -99,8 +99,6 @@ function itemClick() {
 
 //listener for clicking items with class useItem
 $(".useItem").click(itemClick); 
-//listener for adding category
-$("#new-cat").click(projectClick);
 
 // data = '[{"name" : "Ashwin", "age" : "20"},{"name" : "Abhinandan", "age" : "20"}]';
 // var mydata = JSON.parse(data);

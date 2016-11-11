@@ -12,7 +12,17 @@ $(document).on('click', '.delete', function() {
 function initializePage() {
 
 $("#new-cat").click(projectClick);
+$("#newt").click(teamAdd);
 
+}
+
+function teamAdd(e) {
+	e.preventDefault();
+	var user = document.getElementById("uname").value;
+	console.log(user);
+	counter++;
+	$("#you").append("<li class='def'>" + user + " <span class='delete'><button>Remove</button></span></li>");
+	document.getElementById("uname").value = '';	
 }
 
 function projectClick(e) {

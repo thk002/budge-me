@@ -26,7 +26,7 @@
       <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#home">Status</a></li>
         <li><a data-toggle="tab" href="#menu1">Items</a></li>
-        <li><a data-toggle="tab" href="#menu2">Friends</a></li>
+        <li><a data-toggle="tab" href="#menu2">Team</a></li>
       </ul>
 
       <!-- TEAM STATUS ------------------------------------- -->
@@ -130,23 +130,19 @@
         <!-- </table> -->
         </div>
         <div id="menu2" class="tab-pane fade">
-          <h3>Friends</h3>
+          <h3>My Team</h3>
           <ul>
-            <li>My Team</li>
-            <ul>
-              <li> Lettuce </li>
-              <li> Watermelon </li>
-              <li> Strawberry </li>
-              <li> Mint </li>
-            </ul>
-            <li>My Friends</li>
-            <ul>
-              <li> Lettuce </li>
-              <li> Watermelon </li>
-              <li> Strawberry </li>
-              <li> Mint </li>
-            </ul>
+              <li class="def" id="you"> You </li>
+              <li> Lettuce <span class="delete"><button>Remove</button></span></li> 
+              <li> Watermelon <span class="delete"><button>Remove</button></span></li>
+              <li> Strawberry <span class="delete"><button>Remove</button></span></li>
+              <li> Mint <span class="delete"><button>Remove</button></span></li>
           </ul>
+          
+          <form id="fform" method="post">
+          User Name: <input type="text" id="uname" value=" " required>
+          <button><a href="#" id="newt">Add User to Team</a></button> 
+          </form>
         </div>
       </div>
     </div>

@@ -33,15 +33,23 @@
       <!-- TEAM STATUS ------------------------------------- -->
       <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
+          <p><font color="purple">Check out garden updates and complete quests</font></p>
           <h3>Team Status</h3>
           <br>
-          <p><%= daily[0].remark %> <b><%= daily[0].title %></b> </p>
+          <p><%= daily[0].remark %><b><%= daily[0].title %></b> </p>
           <p><%= daily[0].action %>!</p>
-          <br>
+          <img src="<%= daily[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+          <br><br><br>
           <p><%= weekly[0].remark %> <b><%= weekly[0].title %></b> </p>
           <p><%= weekly[0].action %>!</p>
+          <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+          <br><br><br>
+          <p> <font color="purple"> Click on the items tab to view ALL of your garden items</font><p>
+          <br>
         <!-- QUESTONS ------------------------------------- -->
-          <h2>Have you been keeping up with your budget?</h2>        
+          <h2>Have you been keeping up with your budget?</h2>  
+          <p> <font color="purple"> Answer the questions below to complete quests and get new items</font><p>   
+          <br>   
           <form action="/items">
             <p>Did you spend no more than $5 on boba today?</p><br>
               <input type="radio" name="daily" value="yes"> Yes
@@ -59,7 +67,7 @@
         <!-- ITEMS TABLE ------------------------------------- -->
         <div id="menu1" class="tab-pane fade">
           <h3>Garden Items</h3>
-          <p>Check Out Your Garden:</p>
+          <p>Lists garden items:</p>
         <table class="table table-hover">
           <thead>
             <tr>

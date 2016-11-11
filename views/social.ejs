@@ -34,8 +34,12 @@
       <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
           <h3>Team Status</h3>
-          <p><%= daily[0].remark %> <%= daily[0].title %> </p>
-          <p><%= daily[0].action %></p>
+          <br>
+          <p><%= daily[0].remark %> <b><%= daily[0].title %></b> </p>
+          <p><%= daily[0].action %>!</p>
+          <br>
+          <p><%= weekly[0].remark %> <b><%= weekly[0].title %></b> </p>
+          <p><%= weekly[0].action %>!</p>
         <!-- QUESTONS ------------------------------------- -->
           <h2>Have you been keeping up with your budget?</h2>        
           <form action="/items">

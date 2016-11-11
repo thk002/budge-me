@@ -2,14 +2,6 @@ var express = require('express');
 var router = express.Router();
 var fs = require("fs");
 
-// Extra for now.
-var data = require('../budget.json');
-
-exports.view = function(req, res) {
-	console.log(budget);
-	res.render('index');
-};
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');

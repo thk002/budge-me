@@ -5,6 +5,10 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$(document).on('click', '.delete', function() {
+   $(this).closest("li").remove(); 
+});
+
 function initializePage() {
 
 $("#new-cat").click(projectClick);
@@ -17,7 +21,7 @@ function projectClick(e) {
 	var item = $("#items");
 	console.log(category);
 	counter++;
-	$("#defaultItems").append("<li class='budg-item'>" +category+"<input type='range' class='slider' min='0' max='50' value='0' step='10' oninput='showValue("+counter+", this.value)' /><span id='range" + counter + "'>0</span></li>");
+	$("#defaultItems").append("<li class='budg-item'>" +category+ " <span class='delete'><button>Remove</button></span>" +"<input type='range' class='slider' min='0' max='50' value='0' step='10' oninput='showValue("+counter+", this.value)' /><span id='range" + counter + "'>0</span></li>");
 }
 
 function showValue(element, newValue)

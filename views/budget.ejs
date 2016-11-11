@@ -21,22 +21,22 @@
     
     <div class="container" id="budget">
       <ul id ="items">
-        <li class="budg-item"> Weekly Budget <span id="itemName"></span>
+        <li class="budg-item"> Weekly Budget <span id="itemName"></span> <span class="delete"><button>Remove</button></span>
           <input type="range" class="slider" min="0" max="250" value="0" step="5" oninput="showValue(1,this.value)" />
           <span id="range1"><!-- Updated value -->0</span>
         </li>
 
-        <li class="budg-item"> Groceries
+        <li class="budg-item"> Groceries <span class="delete"><button>Remove</button></span>
           <input type="range" class="slider" min="0" max="50" value="0" step="10" oninput="showValue(2, this.value)" />
           <span id="range2">0</span>
         </li>
 
-        <li class="budg-item"> Fast Food 
+        <li class="budg-item"> Fast Food <span class="delete"><button>Remove</button></span>
           <input type="range" class="slider" min="0" max="50" value="0" step="10" oninput="showValue(3,this.value)" />
           <span id="range3">0</span>
         </li>
 
-        <li class="budg-item" id="defaultItems"> Entertainment 
+        <li class="budg-item" id="defaultItems"> Entertainment <span class="delete"><button>Remove</button></span>
           <input type="range" class="slider" min="0" max="50" value="0" step="10" oninput="showValue(4,this.value)" />
           <span id="range4">0</span>
         </li>

@@ -19,7 +19,7 @@
     </ul>
     
     <div class="garden-img">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Farm_garden_at_the_Hess_Homestead.jpg" alt="Your Garden" style="width:800px;height:600px">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Farm_garden_at_the_Hess_Homestead.jpg" alt="Your Garden" style="width:00px;height:0px">
     </div>
 
     <div class="container">
@@ -31,6 +31,7 @@
         <li><a data-toggle="tab" href="#menu3">Friends</a></li>
       </ul>
 
+<!-- TEAM STATUS ------------------------------------- -->
       <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
           <h3>Team Status</h3>
@@ -40,68 +41,79 @@
         </div>
         <div id="menu1" class="tab-pane fade">
           <h2>Have you been keeping up with your budget?</h2>
-          <p>Did you spend no more than $5 on boba today?</p>
-          <button><a href="/TBD">Yes</a></button><button><a href="/TBD">No</a></button>
-          <p>Did you spend no more than $200 this week?</p>
-          <button><a href="/TBD">Yes</a></button><button><a href="/TBD">No</a></button>
+
+<!-- QUESTONS ------------------------------------- -->
+          
+          <form action="/items">
+            <p>Did you spend no more than $5 on boba today?</p><br>
+              <input type="radio" name="daily" value="yes"> Yes
+              <input type="radio" name="daily" value="no"> No<br>        
+            <br>
+          
+            <p>Did you spend no more than $200 this week?</p><br>
+              <input type="radio" name="weekly" value="yes" > Yes
+              <input type="radio" name="weekly" value="no"> No<br>
+
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
         </div>
         <div id="menu2" class="tab-pane fade">
           <h3>Garden Items</h3>
           <p>Check Out Your Garden:</p>
-        
+       
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th>Plant</th>
+              <th>Items</th>
               <th>Image</th>
             </tr>
           </thead>
           <tbody>
-            <% for(var i=0; i < data.dailyRewards.length; i++) { %>
              <tr>
               <td>
-              <%= data.dailyRewards[i].title %>
+              <%= daily[0].title %>
               </td>
               <td>
-              <img src="<%= data.dailyRewards[i].imageURL %>" alt="" border=3 height=100 width=100></img>
+              <img src="<%= daily[0].imageURL %>" alt="" border=3 height=100 width=100></img>
+              </td>
+              <br><br>
+              <td>
+              <%= weekly[0].title %>
+              </td>
+              <td>
+              <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=100 width=100></img>
               </td>
             </tr>
-            <% } %>
             <!-- <tr>
               <td>Lettuce</td>
               <td><img src="http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg" alt="" border=3 height=100 width=100></img></td>
             </tr> -->
-            <!-- <tr>
-              <td>Watermelon</td>
-              <td><img src="http://foodclipart.com/food_clipart_images/a_watermelon_freshly_picked_from_the_vine_with_a_watermelon_slice_0515-0910-2901-0710_SMU.jpg" alt="" border=3 height=100 width=100></img></td>
-            </tr>
-            <tr>
-              <td>Strawberry</td>
-              <td><img src="http://www.clipartkid.com/images/366/strawberries-clip-art-at-clker-com-vector-clip-art-online-royalty-OnTw5V-clipart.png" alt="" border=3 height=100 width=100></img></td>
-            </tr>
-            <tr>
-              <td>Mint</td>
-              <td><img src="http://worldartsme.com/images/mint-clipart-1.jpg" alt="" border=3 height=100 width=100></img></td>
-            </tr> -->
           </tbody>
         </table>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Fertilizers: 2</th>
-              <th>Water: 2</th>
-              <th>Pesticide: 3</th>
-            </tr>
-          </thead>
-        </table>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Pests: 1</th>
-              <th>Contaminants: 0</th>
-            </tr>
-          </thead>
-        </table>
+        <!-- Add image of items, and increment instead of inject -->
+        <!-- <table class="table table-bordered"> -->
+          <!-- <thead> -->
+            <!-- <tr> -->
+              <!-- if type == fertilizer, inc         -->
+              <!-- <th>Fertilizers: 2</th> -->
+              <!-- if type == water, inc -->
+              <!-- <th>Water: 2</th> -->
+              <!-- if type == pesticide, inc -->
+              <!-- <th>Pesticide: 3</th> -->
+            <!-- </tr> -->
+          <!-- </thead> -->
+        <!-- </table> -->
+        <!-- <table class="table table-bordered"> -->
+          <!-- <thead> -->
+            <!-- <tr> -->
+              <!-- if type == pests, inc and minus plant item onclick-->
+              <!-- <th>Pests: 1</th> -->
+              <!-- if type == contaminant, inc, and minus random item onclick -->
+              <!-- <th>Contaminants: 0</th> -->
+            <!-- </tr> -->
+          <!-- </thead> -->
+        <!-- </table> -->
         </div>
         <div id="menu3" class="tab-pane fade">
           <h3>Friends</h3>
@@ -124,5 +136,7 @@
         </div>
       </div>
     </div>
+    <script src="js/javascript.js"></script>
+    <!-- // <script src="routes/index.js"></script>               -->
   </body>
 </html>

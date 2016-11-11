@@ -52,31 +52,40 @@
             <input type="submit" value="Submit">
           </form>
         </div>
-        <!-- ITEMS ------------------------------------- -->
+        <!-- ITEMS TABLE ------------------------------------- -->
         <div id="menu1" class="tab-pane fade">
           <h3>Garden Items</h3>
           <p>Check Out Your Garden:</p>
-        <table class="table table-bordered">
+        <table class="table table-hover">
           <thead>
             <tr>
               <th>Items</th>
               <th>Image</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
-             <tr>
+            <tr>
               <td>
               <%= daily[0].title %>
               </td>
               <td>
               <img src="<%= daily[0].imageURL %>" alt="" border=3 height=100 width=100></img>
               </td>
+              <td>
+              <%= daily[0].action %>  
+              </td>
               <br><br>
+            </tr>
+            <tr>
               <td>
               <%= weekly[0].title %>
               </td>
               <td>
               <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=100 width=100></img>
+              </td>
+              <td>
+              <%= weekly[0].action %>  
               </td>
             </tr>
             <!-- <tr>

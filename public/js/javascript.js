@@ -22,6 +22,7 @@ function projectClick(e) {
 	console.log(category);
 	counter++;
 	$("#defaultItems").append("<li class='budg-item'>" +category+ " <span class='delete'><button>Remove</button></span>" +"<input type='range' class='slider' min='0' max='50' value='0' step='10' oninput='showValue("+counter+", this.value)' /><span id='range" + counter + "'>0</span></li>");
+	document.getElementById("cname").value = '';	
 }
 
 function showValue(element, newValue)

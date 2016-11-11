@@ -21,6 +21,7 @@
     
     <div class="container" id="budget">
       <ul id ="items">
+        <p></p>
         <li class="budg-item"> Weekly Budget <span id="itemName"></span> <span class="delete"><button>Remove</button></span>
           <input type="range" class="slider" min="0" max="250" value="0" step="5" oninput="showValue(1,this.value)" />
           <span id="range1"><!-- Updated value -->0</span>
@@ -41,9 +42,9 @@
           <span id="range4">0</span>
         </li>
 
-        <form action="demo_form.asp" method="post">
+        <form id="catform" method="post">
         Category Name: <input type="text" id="cname" value=" " required>
-        <button><a href="#" id="new-cat">Add Category</a></button> <input type="reset" value="Clear">
+        <button><a href="#" id="new-cat">Add Category</a></button> 
         </form>
       </ul>
     </div>  

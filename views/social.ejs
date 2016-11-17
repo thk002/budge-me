@@ -31,74 +31,65 @@
         <li><a data-toggle="tab" style="padding-left:80px;padding-right:80px;border-left: 1px solid #ddd;border-right: 1px solid #ddd" id ="teamTab" href="#menu2">Team</a></li>
       </ul>
 
-      <!--  Start columns for quests and status -->
-      <div class="panel panel-default">
-      <div class="row">
+     
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade active in">
+          
+        <div class="row">  
+        <!-- QUESTONS ------------------------------------- -->
+        <div class="col-sm-3 col-md-6">
+          <h2>Have you been keeping up with your budget?</h2>  
+          <p> <font color="#6699cc"> Answer the questions below to complete quests and get new items</font></p><p>   
+          </p><div class="panel panel-default">
+          <p></p><form action="/items">
+            <p>Did you spend no more than $5 on boba today?</p><br>
+              <input type="radio" name="daily" value="yes"> Yes
+              <input type="radio" name="daily" value="no"> No<br>        
+            <br>
+          
+            <p>Did you spend no more than $200 this week?</p><br>
+              <input type="radio" name="weekly" value="yes"> Yes
+              <input type="radio" name="weekly" value="no"> No<br>
 
-        <!-- QUESTS ------------------------------------- -->
-              <div class="col-sm-3 col-md-6">
-                <h3>Have you been keeping up with your budget?</h3>  
-                <p> <font color="#6699cc"> Answer the questions below to complete quests and get new items</font></p><p>   
-                <br>
-                </p>
-                <div class="panel panel-default">
-                <p></p><form action="/items">
-                  <p>Did you spend no more than $5 on boba today?</p><br>
-                    <input type="radio" name="daily" value="yes"> Yes
-                    <input type="radio" name="daily" value="no"> No<br>        
-                  <br>
-                
-                  <p>Did you spend no more than $200 this week?</p><br>
-                    <input type="radio" name="weekly" value="yes"> Yes
-                    <input type="radio" name="weekly" value="no"> No<br>
 
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
 
-                  <br><br>
-                  <input type="submit" value="Submit">
-                </form>
-                </div>
-              </div>
-
-      <!-- TEAM STATUS ------------------------------------- -->
+        <!-- TEAM STATUS ------------------------------------- -->
+        <div class="col-sm-3 col-md-6">
       
-          <div class="tab-content">
-            <div id="home" class="tab-pane fade active in">
-              <div class="col-sm-3 col-md-6">              
-                <h3>Team Status</h3>
-                <p> <a href="#itemsTab"><font color="#6699cc"> Click on the items tab to view ALL of your garden items</font></a></p>
-                <br>
-                <div class="panel-group">
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                    <p>Oh well, tomorrow is another day! Since you did not stay in budget you get: <b>ants</b> </p></div>            
-                    <div class="panel-body">
-                      <p>Ewww! Ants have infested your garden!</p>
-                      <img src="http://cliparting.com/wp-content/uploads/2016/10/Ants-clipart-clipart.jpg" alt="" border="3" height="50" width="50"></div>
-                  </div>
-                  <br>
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                    <p>Prove it to yourself, do it for yourself! Since you did not stay in budget today you get:  <b>goat</b> </p>
-                    </div>
-                  <div class="panel-body">
-                    <p>A goat broke into the garden!</p>
-                    <img src="http://images.clipartpanda.com/goat-clip-art-clip-art-goats-445410.jpg" alt="" border="3" height="50" width="50">
-                  </div>
-                  </div>
-                </div>
-                <br>
-                <p>
-                <br>
-                </p>
+          <h2>Team Status</h2>
+          <p> <a href="#itemsTab"><font color="#6699cc"> Click on the items tab to view ALL of your garden items</font></a></p><p>
+          <br>
+          <div class="panel-group">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+              <p>Oh well, tomorrow is another day! Since you did not stay in budget you get: <b>ants</b> </p></div>            
+              <div class="panel-body">
+                <p>Ewww! Ants have infested your garden!</p>
+                <img src="http://cliparting.com/wp-content/uploads/2016/10/Ants-clipart-clipart.jpg" alt="" border="3" height="50" width="50"></div>
+            </div>
+            <br>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+              <p>Prove it to yourself, do it for yourself! Since you did not stay in budget today you get:  <b>goat</b> </p>
               </div>
+              <div class="panel-body">
+              <p>A goat broke into the garden!</p>
+              <img src="http://images.clipartpanda.com/goat-clip-art-clip-art-goats-445410.jpg" alt="" border="3" height="50" width="50">
               </div>
+            </div>
+          </div>
+          <br>
+            </p>
           </div>
         </div>
       </div>
-      </div>
 
         <!-- ITEMS TABLE ------------------------------------- -->
-        
         <div id="menu1" class="tab-pane fade">
           <h3>Garden Items</h3>
           <p><font color="#6699cc">List of current garden items</font></p>

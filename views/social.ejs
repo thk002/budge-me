@@ -6,15 +6,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- // <script src="css/Stylesheet.css"></script> -->
+  <!-- <link href="/css/Stylesheet.css" rel="stylesheet" type="text.css"> -->
 
     <title>Social</title>
   </head>
   <body>
 
     <ul class="nav nav-tabs nav-justified">
-      <li class="tab-active nav-tabs"><a href="/">Garden</a></li>
-      <li class="nav-tabs"><a href="/social">Social</a></li>
-      <li class="nav-tabs"><a href="/budget">Budget</a></li>
+      <li class="tab-active nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/">Garden</a></li>
+      <li class="nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/social">Social</a></li>
+      <li class="nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/budget">Budget</a></li>
     </ul>
     
     <div class="garden-img">
@@ -24,57 +26,77 @@
     <div class="container">
       <h2>Garden Status</h2>
       <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Status</a></li>
-        <li><a data-toggle="tab" href="#menu1">Items</a></li>
-        <li><a data-toggle="tab" href="#menu2">Team</a></li>
+        <li class="active"><a data-toggle="tab" style="padding-left:80px; padding-right:80px" id ="statusTab" href="#home">Status</a></li>
+        <li><a data-toggle="tab" style="padding-left:80px;padding-right:80px;border-left: 1px solid #ddd;border-right: 1px solid #ddd" id ="itemsTab" href="#menu1">Items</a></li>
+        <li><a data-toggle="tab" style="padding-left:80px;padding-right:80px;border-left: 1px solid #ddd;border-right: 1px solid #ddd" id ="teamTab" href="#menu2">Team</a></li>
       </ul>
 
       <!-- TEAM STATUS ------------------------------------- -->
       <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
-          <p><font color="purple">Check out garden updates and complete quests</font></p>
+        <div id="home" class="tab-pane fade active in">
+          <p><font color="#6699cc">Check out garden updates and complete quests</font></p>
           <h3>Team Status</h3>
           <br>
-          <p><%= daily[0].remark %><b><%= daily[0].title %></b> </p>
-          <p><%= daily[0].action %>!</p>
-          <img src="<%= daily[0].imageURL %>" alt="" border=3 height=50 width=50></img>
-          <br><br><br>
-          <p><%= weekly[0].remark %> <b><%= weekly[0].title %></b> </p>
-          <p><%= weekly[0].action %>!</p>
-          <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=50 width=50></img>
-          <br><br><br>
-          <p> <font color="purple"> Click on the items tab to view ALL of your garden items</font><p>
+          <div class="panel-group">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+              <p>Oh well, tomorrow is another day! Since you did not stay in budget you get: <b>ants</b> </p></div>            
+              <div class="panel-body">
+                <p>Ewww! Ants have infested your garden!</p>
+                <img src="http://cliparting.com/wp-content/uploads/2016/10/Ants-clipart-clipart.jpg" alt="" border="3" height="50" width="50"></div>
+            </div>
+            <br>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+              <p>Prove it to yourself, do it for yourself! Since you did not stay in budget today you get:  <b>goat</b> </p>
+              </div>
+              <div class="panel-body">
+              <p>A goat broke into the garden!</p>
+              <img src="http://images.clipartpanda.com/goat-clip-art-clip-art-goats-445410.jpg" alt="" border="3" height="50" width="50">
+              </div>
+            </div>
+          </div>
           <br>
+          <p> <a href="#itemsTab"><font color="#6699cc"> Click on the items tab to view ALL of your garden items</font></a></p><p>
+          <br>
+            </p>
         <!-- QUESTONS ------------------------------------- -->
           <h2>Have you been keeping up with your budget?</h2>  
-          <p> <font color="purple"> Answer the questions below to complete quests and get new items</font><p>   
-          <br>   
-          <form action="/items">
+          <p> <font color="#6699cc"> Answer the questions below to complete quests and get new items</font></p><p>   
+          <br>
+          </p><div class="panel panel-default">
+          <p></p><form action="/items">
             <p>Did you spend no more than $5 on boba today?</p><br>
               <input type="radio" name="daily" value="yes"> Yes
               <input type="radio" name="daily" value="no"> No<br>        
             <br>
           
             <p>Did you spend no more than $200 this week?</p><br>
-              <input type="radio" name="weekly" value="yes" > Yes
+              <input type="radio" name="weekly" value="yes"> Yes
               <input type="radio" name="weekly" value="no"> No<br>
+
 
             <br><br>
             <input type="submit" value="Submit">
           </form>
         </div>
+        </div>
+
         <!-- ITEMS TABLE ------------------------------------- -->
         <div id="menu1" class="tab-pane fade">
           <h3>Garden Items</h3>
-          <p>Lists garden items:</p>
+          <p><font color="#6699cc">List of current garden items</font></p>
+        <div class="panel panel-default">
         <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>Items</th>
-              <th>Image</th>
-              <th>Description</th>
-            </tr>
-          </thead>
+          <div class="panel-heading">
+            <thead>
+              <tr>
+                <th>Items</th>
+                <th>Image</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+          </div>
           <tbody>
             <tr>
               <td>
@@ -105,6 +127,7 @@
             </tr> -->
           </tbody>
         </table>
+        </div>
         <!-- Add image of items, and increment instead of inject -->
         <!-- <table class="table table-bordered"> -->
           <!-- <thead> -->
@@ -130,15 +153,18 @@
         <!-- </table> -->
         </div>
         <div id="menu2" class="tab-pane fade">
-          <h3>My Team</h3>
-          <ul>
+          <div class="panel panel-default" >
+            <div class="panel-heading"><h3>My Team</h3></div>
+            <p><font color="#6699cc">Edit team members</font></p>
+            <ul>
               <li class="def" id="you"> You </li>
               <li> Lettuce <span class="delete"><button>Remove</button></span></li> 
               <li> Watermelon <span class="delete"><button>Remove</button></span></li>
               <li> Strawberry <span class="delete"><button>Remove</button></span></li>
               <li> Mint <span class="delete"><button>Remove</button></span></li>
           </ul>
-          
+        </div>
+        <div class="panel panel-default">
           <form id="fform" method="post">
           User Name: <input type="text" id="uname" value=" " required>
           <button><a href="#" id="newt">Add User to Team</a></button> 

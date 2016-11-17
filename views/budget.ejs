@@ -12,16 +12,16 @@
   <body>
     <div>
       <ul class="nav nav-tabs nav-justified">
-          <li class="tab-active nav-tabs"><a href="/">Garden</a></li>
-          <li class="nav-tabs"><a href="/social">Social</a></li>
-          <li class="nav-tabs"><a href="/budget">Budget</a></li>
-      </ul>
+      <li class="tab-active nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/">Garden</a></li>
+      <li class="nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/social">Social</a></li>
+      <li class="nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/budget">Budget</a></li>
+    </ul>
     </div>
     
     <div class="container" id="budget">
       <ul id ="items">
         <p></p>
-        <p><font color="purple">*Use the sliders to control the amount of money you want to set as your budget for each category. To add a new category, fill in the form at the bottom. If you want to delete a category, use the remove button.</font></p>
+        <p><font color="#6699cc">*Use the sliders to control the amount of money you want to set as your budget for each category. To add a new category, fill in the form at the bottom. If you want to delete a category, use the remove button.</font></p>
         <li class="budg-item" id="defaultItems"> Weekly Budget <span id="itemName"></span> 
           <input type="range" class="slider" min="0" max="250" value="0" step="5" oninput="showValue(1,this.value)" />
           <span id="range1"><!-- Updated value -->0</span>

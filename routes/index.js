@@ -16,7 +16,6 @@ router.get('/', function(req, res, next) {
 /* GET social page. */
 router.get('/social', function(req, res, next) {
 	res.redirect('items');
-  res.render('social', {data: daily});
 });
 /* GET budget page. */
 router.get('/budget', function(req, res, next) {
@@ -48,7 +47,7 @@ router.get('/TBD', function(req, res, next) {
    	// res.send(dailyItem)
  
    }
-   else {
+   else if (req.query.daily == 'no') {
    	//get daily rewards item
    	dailyItem.push(dailyNo.dailyPenalty[0])
    	// res.send(dailyItem)
@@ -60,7 +59,7 @@ router.get('/TBD', function(req, res, next) {
     	// res.send(weeklyItem)
  
    }
-   else {
+   else if (req.query.weekly == 'no') {
    	//get weekly rewards item
   	weeklyItem.push(weeklyNo.weeklyPenalty[0])
     	// res.send(weeklyItem)

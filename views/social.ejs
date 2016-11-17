@@ -63,28 +63,28 @@
       
           <h2>Team Status</h2>
           <p> <a href="#itemsTab"><font color="#6699cc"> Click on the items tab to view ALL of your garden items</font></a></p><p>
-          <br>
+
           <div class="panel-group">
+      
             <div class="panel panel-default">
               <div class="panel-heading">
-              <p>Oh well, tomorrow is another day! Since you did not stay in budget you get: <b>ants</b> </p></div>            
-              <div class="panel-body">
-                <p>Ewww! Ants have infested your garden!</p>
-                <img src="http://cliparting.com/wp-content/uploads/2016/10/Ants-clipart-clipart.jpg" alt="" border="3" height="50" width="50"></div>
-            </div>
-            <br>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-              <p>Prove it to yourself, do it for yourself! Since you did not stay in budget today you get:  <b>goat</b> </p>
+                <p><%= daily[0].remark %><b><%= daily[0].title %></b></p>
               </div>
               <div class="panel-body">
-              <p>A goat broke into the garden!</p>
-              <img src="http://images.clipartpanda.com/goat-clip-art-clip-art-goats-445410.jpg" alt="" border="3" height="50" width="50">
+                <p><%= daily[0].action %>!</p>
+                <img src="<%= daily[0].imageURL %>" alt="" border=3 height=50 width=50></img>
               </div>
+                
+              <div class="panel-heading">    
+                <p><%= weekly[0].remark %> <b><%= weekly[0].title %></b> </p>
+              </div>
+              <div class="panel-body">
+                <p><%= weekly[0].action %>!</p>
+                <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+              </div>
+
             </div>
           </div>
-          <br>
-            </p>
           </div>
         </div>
       </div>

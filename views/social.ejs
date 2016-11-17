@@ -53,12 +53,12 @@
 
 
             <br><br>
-            <input type="submit" value="Submit">
+            <input id="submit-button" type="submit" value="Submit">
           </form>
         </div>
       </div>
 
-        <!-- TEAM STATUS ------------------------------------- -->
+        <!-- TEAM STATUS  ----------------------------- -->
         <div class="col-sm-3 col-md-6">
       
           <h2>Team Status</h2>
@@ -66,7 +66,9 @@
 
           <div class="panel-group">
       
-            <div class="panel panel-default">
+            <% if (daily[0]) { %>
+
+            <div class="panel panel-default" id="status" style="visibility:visible">
               <div class="panel-heading">
                 <p><%= daily[0].remark %><b><%= daily[0].title %></b></p>
               </div>
@@ -82,14 +84,16 @@
                 <p><%= weekly[0].action %>!</p>
                 <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=50 width=50></img>
               </div>
-
             </div>
+
+            <% } %>
+
           </div>
           </div>
         </div>
       </div>
 
-        <!-- ITEMS TABLE ------------------------------------- -->
+        <!-- ITEMS TABLE ----------------------------  -->
         <div id="menu1" class="tab-pane fade">
           <h3>Garden Items</h3>
           <p>List of current garden items</p>
@@ -105,6 +109,7 @@
             </thead>
           </div>
           <tbody>
+            <% if (daily[0]) { %>
             <tr>
               <td>
               <a href="#" class="useItem"><%= daily[0].title %></a>
@@ -117,6 +122,8 @@
               </td>
               <br><br>
             </tr>
+            <% } %>
+            <% if (weekly[0]) { %>
             <tr>
               <td>
               <a href="#" class="useItem"><%= weekly[0].title %></a>
@@ -128,6 +135,7 @@
               <%= weekly[0].action %>  
               </td>
             </tr>
+            <% } %>
             <!-- <tr>
               <td>Lettuce</td>
               <td><img src="http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg" alt="" border=3 height=100 width=100></img></td>
@@ -172,7 +180,7 @@
           </ul>
         </div>
         <div class="panel panel-default">
-          <form id="fform" method="post">
+          <fom id="fform" method="post">
           User Name: <input type="text" id="uname" value=" " required>
           <button><a href="#" id="newt">Add User to Team</a></button> 
           </form>
@@ -180,6 +188,31 @@
       </div>
     </div>
     <script src="js/javascript.js"></script>
+    <!-- <script type="text/javascript">
+
+    //   $('#submit-button').click(function(e){
+
+    //     // document.getElementById("status").style.visibility = "hidden";
+
+    //     // return boolean value to indicate yes/no response
+    //     var daily = ($('input[name=daily]:checked').val() === "yes");
+    //     var weekly = ($('input[name=weekly]:checked').val() === "yes");
+
+    //     if(daily === 1) {
+    //       $.get("/JSON/dailyRewards", addDailyItem); 
+    //     }
+    //     else {
+    //       $.get("/JSON/dailyPenalty", addDailyItem); 
+    //     }
+    //     if(weekly === 1) {
+    //       $.get("/JSON/weeklyRewards", addWeeklyItem); 
+    //     }
+    //     else {
+    //       $.get("/JSON/weeklyPenalty", addWeeklyItem); 
+    //     }
+
+    //   })
+    // </script> -->
     <!-- // <script src="routes/index.js"></script>               -->
   </body>
 </html>

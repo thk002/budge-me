@@ -68,6 +68,8 @@
       
             <% if (daily[0]) { %>
 
+            <p> New Items Added </p>
+
             <div class="panel panel-default" id="status" style="visibility:visible">
               <div class="panel-heading">
                 <p><%= daily[0].remark %><b><%= daily[0].title %></b></p>
@@ -110,6 +112,7 @@
           </div>
           <tbody>
             <% if (daily[0]) { %>
+
             <tr>
               <td>
               <a href="#" class="useItem"><%= daily[0].title %></a>

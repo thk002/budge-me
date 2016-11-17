@@ -23,22 +23,22 @@
         <p></p>
         <p><font color="#6699cc">*Use the sliders to control the amount of money you want to set as your budget for each category. To add a new category, fill in the form at the bottom. If you want to delete a category, use the remove button.</font></p>
         <li class="budg-item" id="defaultItems"> Weekly Budget <span id="itemName"></span> 
-          <input type="range" class="slider" min="0" max="1000" value="0" step="5" oninput="showValue(1,this.value)" />
+          <input type="range" class="slider" min="0" max="1000" value="0" step="1" oninput="showValue(1,this.value)" />
           <span id="range1"><!-- Updated value -->0</span>
         </li>
 
         <li class="budg-item"> Groceries <span class="delete"><button>Remove</button></span>
-          <input type="range" class="slider" min="0" max="250" value="0" step="10" oninput="showValue(2, this.value)" />
+          <input type="range" class="slider" min="0" max="1000" value="0" step="1" oninput="showValue(2, this.value)" />
           <span id="range2">0</span>
         </li>
 
         <li class="budg-item"> Fast Food <span class="delete"><button>Remove</button></span>
-          <input type="range" class="slider" min="0" max="250" value="0" step="10" oninput="showValue(3,this.value)" />
+          <input type="range" class="slider" min="0" max="1000" value="0" step="1" oninput="showValue(3,this.value)" />
           <span id="range3">0</span>
         </li>
 
         <li class="budg-item"> Entertainment <span class="delete"><button>Remove</button></span>
-          <input type="range" class="slider" min="0" max="250" value="0" step="10" oninput="showValue(4,this.value)" />
+          <input type="range" class="slider" min="0" max="1000" value="0" step="1" oninput="showValue(4,this.value)" />
           <span id="range4">0</span>
         </li>
 

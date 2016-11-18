@@ -95,7 +95,7 @@ function itemClick() {
 };
 
 function itemInGarden(image){
-	var newWin = window.open("/");
+	var newWin = window.open("/home");
 
 	newWin.onload = function() {
 		var newGard = newWin.document.getElementById('garden-img');

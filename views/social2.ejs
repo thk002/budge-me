@@ -40,7 +40,7 @@
 
           <div class="panel-group">
       
-            <% if (daily2) { %>
+            <% if (daily2[0]) { %>
 
             <p> New Items Added </p>
 
@@ -102,9 +102,10 @@
             </tr>
           </thead>
           <tbody>
-            <% if (!daily2[0]) { %>  
+            
             <tr>
               <td>
+            <% if (daily2[0]) { %>  
 
               <a href="#" class="useItem"><%= daily2[0].title %></a>
               </td>

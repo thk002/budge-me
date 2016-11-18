@@ -121,7 +121,7 @@ router.get('/social2', function(req, res, next) {
     weeklyItem2.push(weeklyNo2.weeklyPenalty[noWeekValue])
       // res.send(weeklyItem)
    }
-    console.log(dailyPenalty);
+  
    // render daily/weekly items based on quest response
    res.render('social2', {daily2: dailyItem2, weekly2: weeklyItem2});
    // res.send("Reached Items route")

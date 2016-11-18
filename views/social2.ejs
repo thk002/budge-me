@@ -40,7 +40,7 @@
 
           <div class="panel-group">
       
-            <% if (daily2[0]) { %>
+            <% if (daily2) { %>
 
             <p> New Items Added </p>
 
@@ -74,13 +74,13 @@
           </p><div class="panel panel-default">
           <p></p><form action="/items2">
           <p>Did you spend less than $5 on boba today?</p><br>
-              <input type="radio" name="daily" value="yes"> Yes
-              <input type="radio" name="daily" value="no"> No<br>        
+              <input type="radio" name="daily2" value="yes"> Yes
+              <input type="radio" name="daily2" value="no"> No<br>        
             <br>
           
             <p>Did you spend less than than $200 this week?</p><br>
-              <input type="radio" name="weekly" value="yes"> Yes
-              <input type="radio" name="weekly" value="no"> No<br>
+              <input type="radio" name="weekly2" value="yes"> Yes
+              <input type="radio" name="weekly2" value="no"> No<br>
 
 
             <br><br>
@@ -102,8 +102,10 @@
             </tr>
           </thead>
           <tbody>
+            <% if (!daily2[0]) { %>  
             <tr>
               <td>
+
               <a href="#" class="useItem"><%= daily2[0].title %></a>
               </td>
               <td>
@@ -125,6 +127,8 @@
               <%= weekly2[0].action %>  
               </td>
             </tr>
+
+            <% } %>
             <!-- <tr>
               <td>Lettuce</td>
               <td><img src="http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg" alt="" border=3 height=100 width=100></img></td>

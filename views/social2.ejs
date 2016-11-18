@@ -12,8 +12,8 @@
   <body>
 
     <ul class="nav nav-tabs nav-justified">
-      <li class="tab-active nav-tabs"><a href="/home">Garden</a></li>
-      <li class="nav-tabs"><a href="/social">Social</a></li>
+      <li class="tab-active nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/">Garden</a></li>
+      <li class="nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/social">Social</a></li>
       <li class="nav-tabs"><a href="/budget">Budget</a></li>
     </ul>
     
@@ -24,63 +24,84 @@
     <div class="container">
       <h2>Garden Status</h2>
       <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Status</a></li>
-        <li><a data-toggle="tab" href="#menu1">Items</a></li>
-        <li><a data-toggle="tab" href="#menu2">Team</a></li>
+        <li class="active"><a data-toggle="tab" style="padding-left:80px; padding-right:80px" id ="statusTab" href="#home">Status</a></li>
+        <li><a data-toggle="tab" style="padding-left:80px;padding-right:80px;border-left: 1px solid #ddd;border-right: 1px solid #ddd" id ="itemsTab" href="#menu1">Items</a></li>
+        <li><a data-toggle="tab" style="padding-left:80px;padding-right:80px;border-left: 1px solid #ddd;border-right: 1px solid #ddd" id ="teamTab" href="#menu2">Team</a></li>
       </ul>
 
       <!-- TEAM STATUS ------------------------------------- -->
+
       <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
-          <p><font color="purple">Check out garden updates and complete quests</font></p>
-          <h3>Team Status</h3>
-          <br>
-          <p><%= daily2[0].remark %><b><%= daily2[0].title %></b> </p>
-          <p><%= daily2[0].action %>!</p>
-          <img src="<%= daily2[0].imageURL %>" alt="" border=3 height=50 width=50></img>
-          <br><br><br>
-          <p><%= weekly2[0].remark %> <b><%= weekly2[0].title %></b> </p>
-          <p><%= weekly2[0].action %>!</p>
-          <img src="<%= weekly2[0].imageURL %>" alt="" border=3 height=50 width=50></img>
-          <br><br><br>
-          <p> <font color="purple"> Click on the items tab to view ALL of your garden items</font><p>
-          <br>
+
+          <h2>Team Status</h2>
+
+          <p> <a href="#itemsTab"><font color="#6699cc"> Click on the items tab to view ALL of your garden items</font></a></p><p>
+
+          <div class="panel-group">
+      
+            <% if (daily2[0]) { %>
+
+            <p> New Items Added </p>
+
+            <div class="panel panel-default" id="status" style="visibility:visible">
+              <div class="panel-heading">
+                <p><%= daily2[0].remark %><b><%= daily2[0].title %></b></p>
+              </div>
+              <div class="panel-body">
+                <p><%= daily2[0].action %>!</p>
+                <img src="<%= daily2[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+              </div>
+                
+              <div class="panel-heading">    
+                <p><%= weekly2[0].remark %> <b><%= weekly2[0].title %></b> </p>
+              </div>
+              <div class="panel-body">
+                <p><%= weekly2[0].action %>!</p>
+                <img src="<%= weekly2[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+              </div>
+            </div>
+
+            <% } %>
+
+          </div> 
+
         <!-- QUESTONS ------------------------------------- -->
+
           <h2>Have you been keeping up with your budget?</h2>  
-          <p> <font color="purple"> Answer the questions below to complete quests and get new items</font><p>   
-          <br>   
-          <form action="/items2">
-            <p>Did you spend no more than $5 on boba today?</p><br>
-              <input type="radio" name="daily2" value="yes"> Yes
-              <input type="radio" name="daily2" value="no"> No<br>        
+          <p> Answer the questions below to complete quests and get new items</p><p>   
+
+          </p><div class="panel panel-default">
+          <p></p><form action="/items">
+          <p>Did you spend less than $5 on boba today?</p><br>
+              <input type="radio" name="daily" value="yes"> Yes
+              <input type="radio" name="daily" value="no"> No<br>        
             <br>
           
-            <p>Did you spend no more than $200 this week?</p><br>
-              <input type="radio" name="weekly2" value="yes" > Yes
-              <input type="radio" name="weekly2" value="no"> No<br>
+            <p>Did you spend less than than $200 this week?</p><br>
+              <input type="radio" name="weekly" value="yes"> Yes
+              <input type="radio" name="weekly" value="no"> No<br>
+
 
             <br><br>
-            <input type="submit" value="Submit">
+            <input id="submit-button" type="submit" value="Submit">
           </form>
+          </div>
+
         </div>
         <!-- ITEMS TABLE ------------------------------------- -->
         <div id="menu1" class="tab-pane fade">
           <h3>Garden Items</h3>
-          <p>Click on the name of an item to add it to the garden</p>
-        <div class="panel panel-default">
+          <p>Lists garden items:</p>
         <table class="table table-hover">
-          <div class="panel-heading">
-            <thead>
-              <tr>
-                <th>Items</th>
-                <th>Image</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-          </div>
+          <thead>
+            <tr>
+              <th>Items</th>
+              <th>Image</th>
+              <th>Description</th>
+            </tr>
+          </thead>
           <tbody>
-            <% if (daily2[0]) { %>
-
             <tr>
               <td>
               <a href="#" class="useItem"><%= daily2[0].title %></a>
@@ -93,8 +114,6 @@
               </td>
               <br><br>
             </tr>
-            <% } %>
-            <% if (weekly2[0]) { %>
             <tr>
               <td>
               <a href="#" class="useItem"><%= weekly2[0].title %></a>
@@ -106,14 +125,12 @@
               <%= weekly2[0].action %>  
               </td>
             </tr>
-            <% } %>
             <!-- <tr>
               <td>Lettuce</td>
               <td><img src="http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg" alt="" border=3 height=100 width=100></img></td>
             </tr> -->
           </tbody>
         </table>
-        </div>
         <!-- Add image of items, and increment instead of inject -->
         <!-- <table class="table table-bordered"> -->
           <!-- <thead> -->
@@ -155,6 +172,7 @@
         </div>
       </div>
     </div>
+    
     <script src="js/javascript.js"></script>
   </body>
 </html>

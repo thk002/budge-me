@@ -9,15 +9,19 @@ var dailyNo = JSON.parse(fs.readFileSync('public/JSON/dailyPenalty.json', 'utf8'
 var weeklyYes = JSON.parse(fs.readFileSync('public/JSON/weeklyRewards.json', 'utf8'));
 var weeklyNo = JSON.parse(fs.readFileSync('public/JSON/weeklyPenalty.json', 'utf8'));
 
-var yesDayValue = random.integer(0, dailyYes.length-1);
-var noDayValue = random.integer(0, dailyNo.length-1);
-var yesWeekValue = random.integer(0, weeklyYes.length-1);
-var noWeekValue = random.integer(0, weeklyNo.length-1);
+var yesDayValue = random.integer(0, 6);
+var noDayValue = random.integer(0, 7);
+var yesWeekValue = random.integer(0, 21);
+var noWeekValue = random.integer(0, 5);
 
 
 
-/* GET home page. */
+/* GET login page. */
 router.get('/', function(req, res, next) {
+  res.render('login');
+});
+/* GET home page */
+router.get('/home', function(req, res, next) {
   res.render('index');
 });
 /* GET social page. */
@@ -28,10 +32,7 @@ router.get('/social', function(req, res, next) {
 router.get('/budget', function(req, res, next) {
   res.render('budget');
 });
-/* GET login page. */
-router.get('/login', function(req, res, next) {
-  res.render('login');
-});
+
 /* GET setting page. */
 router.get('/settings', function(req, res, next) {
   res.render('settings');

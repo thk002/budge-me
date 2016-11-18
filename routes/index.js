@@ -104,7 +104,7 @@ router.get('/social2', function(req, res, next) {
     // res.send(dailyItem)
  
    }
-   else {
+   else if (req.query.daily2 == 'no') {
     //get daily rewards item
     dailyItem2.push(dailyNo2.dailyPenalty[noDayValue])
     // res.send(dailyItem)
@@ -116,7 +116,7 @@ router.get('/social2', function(req, res, next) {
       // res.send(weeklyItem)
  
    }
-   else {
+   else if (req.query.weekly2 == 'no') {
     //get weekly rewards item
     weeklyItem2.push(weeklyNo2.weeklyPenalty[noWeekValue])
       // res.send(weeklyItem)

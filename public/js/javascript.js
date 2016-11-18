@@ -1,4 +1,3 @@
-
 var counter = 4;
 
 $(document).ready(function() {
@@ -13,6 +12,8 @@ function initializePage() {
 
 $("#new-cat").click(projectClick);
 $("#newt").click(teamAdd);
+$(".useItem").click(itemClick); 
+
 
 }
 
@@ -42,76 +43,126 @@ function showValue(element, newValue)
 	//access element in database using @element, update value with newValue 
 };
 
-function itemImage(itemName) {
-	//check to see which item was clicked and get the image
-	if (itemName == "small fertilizer"){
-	  console.log("working");
-	  return "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif";
-	}
+// function itemImage(itemName) {
+// 	//check to see which item was clicked and get the image
+// 	if (itemName == "small fertilizer"){
+// 	  console.log("working");
+// 	  return "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif";
+// 	}
 
-	else if (itemName == "small pesticide") {
-	  console.log(itemName);
-	  return "http://www.clipartkid.com/images/349/pesticidesymptoms-of-poisoning-list-of-banned-pesticides-in-japan-DTEP1y-clipart.bmp";
-	}
+// 	else if (itemName == "small pesticide") {
+// 	  console.log(itemName);
+// 	  return "http://www.clipartkid.com/images/349/pesticidesymptoms-of-poisoning-list-of-banned-pesticides-in-japan-DTEP1y-clipart.bmp";
+// 	}
 
-	else if (itemName == "small water") {
-	  console.log(itemName);
-	  return "http://www.clipartkid.com/images/512/11-cartoon-watering-can-free-cliparts-that-you-can-download-to-you-2VEZbZ-clipart.gif";
-	}
+// 	else if (itemName == "small water") {
+// 	  console.log(itemName);
+// 	  return "http://www.clipartkid.com/images/512/11-cartoon-watering-can-free-cliparts-that-you-can-download-to-you-2VEZbZ-clipart.gif";
+// 	}
 
-	else if (itemName == "lettuce") {
-	  console.log(itemName);
-	  return "http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg";
-	}
+// 	else if (itemName == "lettuce") {
+// 	  console.log(itemName);
+// 	  return "http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg";
+// 	}
 
-	else if (itemName == "natural fertilizer") {
-	  console.log(itemName);
-	  return "https://openclipart.org/download/172608/earthworm.svg";
-	}
+// 	else if (itemName == "natural fertilizer") {
+// 	  console.log(itemName);
+// 	  return "https://openclipart.org/download/172608/earthworm.svg";
+// 	}
 
-	else if (itemName == "lady bugs") {
-	  console.log(itemName);
-	  return "http://images.clipartpanda.com/bug-clipart-bug-clipart-09.jpg";
-	}
+// 	else if (itemName == "lady bugs") {
+// 	  console.log(itemName);
+// 	  return "http://images.clipartpanda.com/bug-clipart-bug-clipart-09.jpg";
+// 	}
 
-	else if (itemName == "scarecrow") {
-	  console.log(itemName);
-	  return "http://images.clipartpanda.com/scarecrow-clip-art-scarecrow-clip-art-3.gif";
-	}
-		else if (itemName == "ants") {
-	  console.log(itemName);
-	  return "http://cliparting.com/wp-content/uploads/2016/10/Ants-clipart-clipart.jpg";
-	}
-		else if (itemName == "goat") {
-	  console.log(itemName);
-	  return "http://images.clipartpanda.com/goat-clip-art-clip-art-goats-445410.jpg";
-	}
-		else if (itemName == "large fertilizer") {
-	  console.log(itemName);
-	  return "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif";
-	}
+// 	else if (itemName == "scarecrow") {
+// 	  console.log(itemName);
+// 	  return "http://images.clipartpanda.com/scarecrow-clip-art-scarecrow-clip-art-3.gif";
+// 	}
+// 		else if (itemName == "ants") {
+// 	  console.log(itemName);
+// 	  return "http://cliparting.com/wp-content/uploads/2016/10/Ants-clipart-clipart.jpg";
+// 	}
+// 		else if (itemName == "goat") {
+// 	  console.log(itemName);
+// 	  return "http://images.clipartpanda.com/goat-clip-art-clip-art-goats-445410.jpg";
+// 	}
+// 		else if (itemName == "large fertilizer") {
+// 	  console.log(itemName);
+// 	  return "http://www.clipartkid.com/images/681/some-fertilizers-are-manufactured-in-the-laboratory-while-others-are-lkQqF2-clipart.gif";
+// 	}
 	
-};
+// 	//TESTING CODE
+
+// };
+
 
 //function for when item is clicked to update garden picture
 function itemClick() {
 
-	event.preventDefault();
-	var item = $(this).text();
-	var image = itemImage(item);
+  event.preventDefault();
+  var item = $(this).text();
 
-    var test = window.open("/"); // works the way i want, kinda, opens a new tab
-	test.onload = function() {
-	var pewp = test.document.getElementById('garden-img');
-	$("<img src='"+ image +"' id='newImg'/>").appendTo(pewp);
+  $.getJSON("/JSON/dailyRewards.json", function(json) { 
+    // console.log(json.dailyRewards[0]);
+    for (var i = 0; i < json.dailyRewards.length; i++){
+	  if (item == json.dailyRewards[i].title){
+	    var img = json.dailyRewards[i].imageURL;
+		itemInGarden(img);
+	  } 
 	}
+});
 
+  $.getJSON("/JSON/dailyPenalty.json", function(json) { 
+    // console.log(json.dailyPenalty[0]);
+    for (var i = 0; i < json.dailyPenalty.length; i++){
+	  if (item == json.dailyPenalty[i].title){
+	    var img = json.dailyPenalty[i].imageURL;
+		itemInGarden(img);
+	  } 
+	}
+});
+
+  $.getJSON("/JSON/weeklyRewards.json", function(json) { 
+    // console.log(json.weeklyRewards[0]);
+    for (var i = 0; i < json.weeklyRewards.length; i++){
+	  if (item == json.weeklyRewards[i].title){
+	    var img = json.weeklyRewards[i].imageURL;
+		itemInGarden(img);
+	  } 
+	}
+});
+
+  $.getJSON("/JSON/weeklyPenalty.json", function(json) { 
+    // console.log(json.weeklyPenalty[0]);
+    for (var i = 0; i < json.weeklyPenalty.length; i++){
+	  if (item == json.weeklyPenalty[i].title){
+	    var img = json.weeklyPenalty[i].imageURL;
+		itemInGarden(img);
+	  } 
+	}
+});
+
+// 	//var image = itemImage(item);
+//     var test = window.open("/"); // works the way i want, kinda, opens a new tab
+// 	test.onload = function() {
+// 	var pewp = test.document.getElementById('garden-img');
+// 	$("<img src='"+ image +"' id='newImg'/>").appendTo(pewp);
+// }
 	//maybe try appendto?
 	// console.log($(this).text());
 };
 
+function itemInGarden(image){
+	var newWin = window.open("/");
+
+	newWin.onload = function() {
+		var newGard = newWin.document.getElementById('garden-img');
+		$("<img src='"+ image +"' id='newImg'/>").appendTo(newGard);
+	}
+
+};
 //listener for clicking items with class useItem
-$(".useItem").click(itemClick); 
 
 // data = '[{"name" : "Ashwin", "age" : "20"},{"name" : "Abhinandan", "age" : "20"}]';
 // var mydata = JSON.parse(data);

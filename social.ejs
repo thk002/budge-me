@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- // <script src="css/Stylesheet.css"></script> -->
+  <!-- <link href="/css/Stylesheet.css" rel="stylesheet" type="text.css"> -->
+
+    <title>Social</title>
+  </head>
+  <body>
+
+    <ul class="nav nav-tabs nav-justified">
+      <li class="tab-active nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/home">Garden</a></li>
+      <li class="nav-tabs"><a style="border-left: 1px solid #ddd;border-right: 1px solid #ddd" href="/social">Social</a></li>
+      <li class="nav-tabs"><a href="/budget">Budget</a></li>
+    </ul>
+    
+    <div class="garden-img">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Farm_garden_at_the_Hess_Homestead.jpg" alt="Your Garden" style="width:00px;height:0px">
+    </div>
+
+    <div class="container">
+      <h2>Garden Status</h2>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" style="padding-left:80px; padding-right:80px" id ="statusTab" href="#home">Status</a></li>
+        <li><a data-toggle="tab" style="padding-left:80px;padding-right:80px;border-left: 1px solid #ddd;border-right: 1px solid #ddd" id ="itemsTab" href="#menu1">Items</a></li>
+        <li><a data-toggle="tab" style="padding-left:80px;padding-right:80px;border-left: 1px solid #ddd;border-right: 1px solid #ddd" id ="teamTab" href="#menu2">Team</a></li>
+      </ul>
+
+     
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade active in">
+          
+        <div class="row">  
+        <!-- QUESTONS ------------------------------------- -->
+        <div class="col-sm-3 col-md-6">
+          <h2>Have you been keeping up with your budget?</h2>  
+          <p> Answer the questions below to complete quests and get new items</p><p>   
+          </p><div class="panel panel-default">
+          <p></p><form action="/items">
+            <p>Did you spend less than $5 on boba today?</p><br>
+              <input type="radio" name="daily" value="yes"> Yes
+              <input type="radio" name="daily" value="no"> No<br>        
+            <br>
+          
+            <p>Did you spend less than than $200 this week?</p><br>
+              <input type="radio" name="weekly" value="yes"> Yes
+              <input type="radio" name="weekly" value="no"> No<br>
+
+
+            <br><br>
+            <input id="submit-button" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+
+        <!-- TEAM STATUS  ----------------------------- -->
+        <div class="col-sm-3 col-md-6">
+      
+          <h2>Team Status</h2>
+          <p> <a href="#itemsTab"><font color="#6699cc"> Click on the items tab to view ALL of your garden items</font></a></p><p>
+
+          <div class="panel-group">
+
+            <% if (!daily[0]) { %>      
+              <br>
+              <div class="panel panel-default" id="status">
+                <br>
+                <p> <font color="#d3d3d3"> No items? No updates? Why not complete a quest? </font></p>
+                <br>
+                <br>
+                <br>                
+              </div>
+
+            <% } %>
+      
+            <% if (daily[0]) { %>
+
+            <p id="newItemsPrompt"> New Items Added Below and in the Items Table! </p>
+
+            <div class="panel panel-default" id="status" style="visibility:visible">
+              <div class="panel-heading">
+                <p><%= daily[0].remark %><b><%= daily[0].title %></b></p>
+              </div>
+              <div class="panel-body">
+                <p><%= daily[0].action %>!</p>
+                <img src="<%= daily[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+              </div>
+                
+              <div class="panel-heading">    
+                <p><%= weekly[0].remark %> <b><%= weekly[0].title %></b> </p>
+              </div>
+              <div class="panel-body">
+                <p><%= weekly[0].action %>!</p>
+                <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+              </div>
+            </div>
+
+            <% } %>
+
+          </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- ITEMS TABLE ----------------------------  -->
+        <div id="menu1" class="tab-pane fade">
+          <h3>Garden Items</h3>
+          <p>Click on the name of an item to add it to the garden</p>
+        <div class="panel panel-default">
+        <table class="table table-hover">
+          <div class="panel-heading">
+            <thead>
+              <tr>
+                <th>Items</th>
+                <th>Image</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+          </div>
+          <tbody>
+            <% if (daily[0]) { %>
+
+            <tr>
+              <td>
+              <a href="#" class="useItem"><%= daily[0].title %></a>
+              </td>
+              <td>
+              <img src="<%= daily[0].imageURL %>" alt="" border=3 height=100 width=100></img>
+              </td>
+              <td>
+              <%= daily[0].action %>  
+              </td>
+              <br><br>
+            </tr>
+            <% } %>
+            <% if (weekly[0]) { %>
+            <tr>
+              <td>
+              <a href="#" class="useItem"><%= weekly[0].title %></a>
+              </td>
+              <td>
+              <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=100 width=100></img>
+              </td>
+              <td>
+              <%= weekly[0].action %>  
+              </td>
+            </tr>
+            <% } %>
+            <!-- <tr>
+              <td>Lettuce</td>
+              <td><img src="http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg" alt="" border=3 height=100 width=100></img></td>
+            </tr> -->
+          </tbody>
+        </table>
+        </div>
+        <!-- Add image of items, and increment instead of inject -->
+        <!-- <table class="table table-bordered"> -->
+          <!-- <thead> -->
+            <!-- <tr> -->
+              <!-- if type == fertilizer, inc         -->
+              <!-- <th>Fertilizers: 2</th> -->
+              <!-- if type == water, inc -->
+              <!-- <th>Water: 2</th> -->
+              <!-- if type == pesticide, inc -->
+              <!-- <th>Pesticide: 3</th> -->
+            <!-- </tr> -->
+          <!-- </thead> -->
+        <!-- </table> -->
+        <!-- <table class="table table-bordered"> -->
+          <!-- <thead> -->
+            <!-- <tr> -->
+              <!-- if type == pests, inc and minus plant item onclick-->
+              <!-- <th>Pests: 1</th> -->
+              <!-- if type == contaminant, inc, and minus random item onclick -->
+              <!-- <th>Contaminants: 0</th> -->
+            <!-- </tr> -->
+          <!-- </thead> -->
+        <!-- </table> -->
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <div class="panel panel-default" >
+            <div class="panel-heading"><h3>My Team</h3></div>
+            <p>Edit team members</p>
+            <ul>
+              <li class="def" id="you"> You </li>
+              <li> Lettuce <span class="delete"><button>Remove</button></span></li> 
+              <li> Watermelon <span class="delete"><button>Remove</button></span></li>
+              <li> Strawberry <span class="delete"><button>Remove</button></span></li>
+              <li> Mint <span class="delete"><button>Remove</button></span></li>
+          </ul>
+        </div>
+        <div class="panel panel-default">
+          <fom id="fform" method="post">
+          User Name: <input type="text" id="uname" value=" " required>
+          <button><a href="#" id="newt">Add User to Team</a></button> 
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/javascript.js"></script>
+    <script type="text/javascript">
+
+      setTimeout(function() {
+      $('#newItemsPrompt').fadeOut('slow');
+      }, 5000);
+       // document.getElementById("status").style.visibility = "hidden";
+       
+    </script>
+
+    <!--//     // return boolean value to indicate yes/no response
+    //     var daily = ($('input[name=daily]:checked').val() === "yes");
+    //     var weekly = ($('input[name=weekly]:checked').val() === "yes");
+
+    //     if(daily === 1) {
+    //       $.get("/JSON/dailyRewards", addDailyItem); 
+    //     }
+    //     else {
+    //       $.get("/JSON/dailyPenalty", addDailyItem); 
+    //     }
+    //     if(weekly === 1) {
+    //       $.get("/JSON/weeklyRewards", addWeeklyItem); 
+    //     }
+    //     else {
+    //       $.get("/JSON/weeklyPenalty", addWeeklyItem); 
+    //     }
+
+    //   })
+    // </script>
+    <!-- // <script src="routes/index.js"></script>               -->
+  </body>
+</html>

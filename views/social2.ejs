@@ -39,6 +39,18 @@
           <p> <a href="#itemsTab2"><font color="#6699cc"> Click on the items tab to view ALL of your garden items</font></a></p><p>
 
           <div class="panel-group">
+
+            <% if (!daily2[0]) { %>      
+              <br>
+              <div class="panel panel-default" id="status">
+                <br>
+                <p> <font color="#d3d3d3"> No items? No updates? Why not complete a quest? </font></p>
+                <br>
+                <br>
+                <br>                
+              </div>
+
+            <% } %>
       
             <% if (daily2[0]) { %>
 
@@ -102,7 +114,7 @@
             </tr>
           </thead>
           <tbody>
-            
+
             <tr>
               <td>
             <% if (daily2[0]) { %>  

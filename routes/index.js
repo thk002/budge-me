@@ -86,36 +86,37 @@ router.get('/social2', function(req, res, next) {
 /* GET items page. */
  router.get('/items2', function(req, res, next) {
   
-  var dailyItem=[];
+
+  var dailyItem2=[];
   // dailyItem.push("Test")
-  var weeklyItem=[];
+  var weeklyItem2=[];
  
-   if (req.query.daily == 'yes') {
+   if (req.query.daily2 == 'yes') {
     //Need to add a random number generator
-    dailyItem.push(dailyYes.dailyRewards[yesDayValue])
+    dailyItem2.push(dailyYes.dailyRewards[0])
     // res.send(dailyItem)
  
    }
-   else if (req.query.daily == 'no') {
+   else {
     //get daily rewards item
-    dailyItem.push(dailyNo.dailyPenalty[noDayValue])
+    dailyItem2.push(dailyNo.dailyPenalty[0])
     // res.send(dailyItem)
    }
  
-   if (req.query.weekly == 'yes') {
+   if (req.query.weekly2 == 'yes') {
     //get weekly rewards item
-    weeklyItem.push(weeklyYes.weeklyRewards[yesWeekValue])
+    weeklyItem2.push(weeklyYes.weeklyRewards[0])
       // res.send(weeklyItem)
  
    }
-   else if (req.query.weekly == 'no') {
+   else {
     //get weekly rewards item
-    weeklyItem.push(weeklyNo.weeklyPenalty[noWeekValue])
+    weeklyItem2.push(weeklyNo.weeklyPenalty[0])
       // res.send(weeklyItem)
    }
-   console.log(dailyItem);
+ 
    // render daily/weekly items based on quest response
-   res.render('social2', {daily: dailyItem, weekly: weeklyItem});
+   res.render('social2', {daily2: dailyItem2, weekly2: weeklyItem2});
    // res.send("Reached Items route")
  
  });

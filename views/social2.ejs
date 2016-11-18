@@ -35,13 +35,13 @@
           <p><font color="purple">Check out garden updates and complete quests</font></p>
           <h3>Team Status</h3>
           <br>
-          <p><%= daily[0].remark %><b><%= daily[0].title %></b> </p>
-          <p><%= daily[0].action %>!</p>
-          <img src="<%= daily[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+          <p><%= daily2[0].remark %><b><%= daily2[0].title %></b> </p>
+          <p><%= daily2[0].action %>!</p>
+          <img src="<%= daily2[0].imageURL %>" alt="" border=3 height=50 width=50></img>
           <br><br><br>
-          <p><%= weekly[0].remark %> <b><%= weekly[0].title %></b> </p>
-          <p><%= weekly[0].action %>!</p>
-          <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+          <p><%= weekly2[0].remark %> <b><%= weekly2[0].title %></b> </p>
+          <p><%= weekly2[0].action %>!</p>
+          <img src="<%= weekly2[0].imageURL %>" alt="" border=3 height=50 width=50></img>
           <br><br><br>
           <p> <font color="purple"> Click on the items tab to view ALL of your garden items</font><p>
           <br>
@@ -51,13 +51,13 @@
           <br>   
           <form action="/items2">
             <p>Did you spend no more than $5 on boba today?</p><br>
-              <input type="radio" name="daily" value="yes"> Yes
-              <input type="radio" name="daily" value="no"> No<br>        
+              <input type="radio" name="daily2" value="yes"> Yes
+              <input type="radio" name="daily2" value="no"> No<br>        
             <br>
           
             <p>Did you spend no more than $200 this week?</p><br>
-              <input type="radio" name="weekly" value="yes" > Yes
-              <input type="radio" name="weekly" value="no"> No<br>
+              <input type="radio" name="weekly2" value="yes" > Yes
+              <input type="radio" name="weekly2" value="no"> No<br>
 
             <br><br>
             <input type="submit" value="Submit">
@@ -78,25 +78,25 @@
           <tbody>
             <tr>
               <td>
-              <a href="#" class="useItem"><%= daily[0].title %></a>
+              <a href="#" class="useItem"><%= daily2[0].title %></a>
               </td>
               <td>
-              <img src="<%= daily[0].imageURL %>" alt="" border=3 height=100 width=100></img>
+              <img src="<%= daily2[0].imageURL %>" alt="" border=3 height=100 width=100></img>
               </td>
               <td>
-              <%= daily[0].action %>  
+              <%= daily2[0].action %>  
               </td>
               <br><br>
             </tr>
             <tr>
               <td>
-              <a href="#" class="useItem"><%= weekly[0].title %></a>
+              <a href="#" class="useItem"><%= weekly2[0].title %></a>
               </td>
               <td>
-              <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=100 width=100></img>
+              <img src="<%= weekly2[0].imageURL %>" alt="" border=3 height=100 width=100></img>
               </td>
               <td>
-              <%= weekly[0].action %>  
+              <%= weekly2[0].action %>  
               </td>
             </tr>
             <!-- <tr>

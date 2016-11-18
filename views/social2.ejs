@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>different</title>
+  </head>
+  <body>
+
+    <ul class="nav nav-tabs nav-justified">
+      <li class="tab-active nav-tabs"><a href="/">Garden</a></li>
+      <li class="nav-tabs"><a href="/social">Social</a></li>
+      <li class="nav-tabs"><a href="/budget">Budget</a></li>
+    </ul>
+    
+    <div class="garden-img">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Farm_garden_at_the_Hess_Homestead.jpg" alt="Your Garden" style="width:00px;height:0px">
+    </div>
+
+    <div class="container">
+      <h2>Garden Status</h2>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Status</a></li>
+        <li><a data-toggle="tab" href="#menu1">Items</a></li>
+        <li><a data-toggle="tab" href="#menu2">Team</a></li>
+      </ul>
+
+      <!-- TEAM STATUS ------------------------------------- -->
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <p><font color="purple">Check out garden updates and complete quests</font></p>
+          <h3>Team Status</h3>
+          <br>
+          <p><%= daily[0].remark %><b><%= daily[0].title %></b> </p>
+          <p><%= daily[0].action %>!</p>
+          <img src="<%= daily[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+          <br><br><br>
+          <p><%= weekly[0].remark %> <b><%= weekly[0].title %></b> </p>
+          <p><%= weekly[0].action %>!</p>
+          <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=50 width=50></img>
+          <br><br><br>
+          <p> <font color="purple"> Click on the items tab to view ALL of your garden items</font><p>
+          <br>
+        <!-- QUESTONS ------------------------------------- -->
+          <h2>Have you been keeping up with your budget?</h2>  
+          <p> <font color="purple"> Answer the questions below to complete quests and get new items</font><p>   
+          <br>   
+          <form action="/items2">
+            <p>Did you spend no more than $5 on boba today?</p><br>
+              <input type="radio" name="daily" value="yes"> Yes
+              <input type="radio" name="daily" value="no"> No<br>        
+            <br>
+          
+            <p>Did you spend no more than $200 this week?</p><br>
+              <input type="radio" name="weekly" value="yes" > Yes
+              <input type="radio" name="weekly" value="no"> No<br>
+
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        <!-- ITEMS TABLE ------------------------------------- -->
+        <div id="menu1" class="tab-pane fade">
+          <h3>Garden Items</h3>
+          <p>Lists garden items:</p>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Items</th>
+              <th>Image</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+              <a href="#" class="useItem"><%= daily[0].title %></a>
+              </td>
+              <td>
+              <img src="<%= daily[0].imageURL %>" alt="" border=3 height=100 width=100></img>
+              </td>
+              <td>
+              <%= daily[0].action %>  
+              </td>
+              <br><br>
+            </tr>
+            <tr>
+              <td>
+              <a href="#" class="useItem"><%= weekly[0].title %></a>
+              </td>
+              <td>
+              <img src="<%= weekly[0].imageURL %>" alt="" border=3 height=100 width=100></img>
+              </td>
+              <td>
+              <%= weekly[0].action %>  
+              </td>
+            </tr>
+            <!-- <tr>
+              <td>Lettuce</td>
+              <td><img src="http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg" alt="" border=3 height=100 width=100></img></td>
+            </tr> -->
+          </tbody>
+        </table>
+        <!-- Add image of items, and increment instead of inject -->
+        <!-- <table class="table table-bordered"> -->
+          <!-- <thead> -->
+            <!-- <tr> -->
+              <!-- if type == fertilizer, inc         -->
+              <!-- <th>Fertilizers: 2</th> -->
+              <!-- if type == water, inc -->
+              <!-- <th>Water: 2</th> -->
+              <!-- if type == pesticide, inc -->
+              <!-- <th>Pesticide: 3</th> -->
+            <!-- </tr> -->
+          <!-- </thead> -->
+        <!-- </table> -->
+        <!-- <table class="table table-bordered"> -->
+          <!-- <thead> -->
+            <!-- <tr> -->
+              <!-- if type == pests, inc and minus plant item onclick-->
+              <!-- <th>Pests: 1</th> -->
+              <!-- if type == contaminant, inc, and minus random item onclick -->
+              <!-- <th>Contaminants: 0</th> -->
+            <!-- </tr> -->
+          <!-- </thead> -->
+        <!-- </table> -->
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <h3>My Team</h3>
+          <ul>
+              <li class="def" id="you"> You </li>
+              <li> Lettuce <span class="delete"><button>Remove</button></span></li> 
+              <li> Watermelon <span class="delete"><button>Remove</button></span></li>
+              <li> Strawberry <span class="delete"><button>Remove</button></span></li>
+              <li> Mint <span class="delete"><button>Remove</button></span></li>
+          </ul>
+          
+          <form id="fform" method="post">
+          User Name: <input type="text" id="uname" value=" " required>
+          <button><a href="#" id="newt">Add User to Team</a></button> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

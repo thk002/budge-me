@@ -78,46 +78,46 @@ router.get('/TBD', function(req, res, next) {
  
  });
 
-//  //second page?
-// router.get('/social2', function(req, res, next) {
-//   res.redirect('items2');
-// });
+ //second page?
+router.get('/social2', function(req, res, next) {
+  res.redirect('items2');
+});
 
-// /* GET items page. */
-//  router.get('/items2', function(req, res, next) {
+/* GET items page. */
+ router.get('/items2', function(req, res, next) {
   
-//   var dailyItem=[];
-//   // dailyItem.push("Test")
-//   var weeklyItem=[];
+  var dailyItem=[];
+  // dailyItem.push("Test")
+  var weeklyItem=[];
  
-//    if (req.query.daily == 'yes') {
-//     //Need to add a random number generator
-//     dailyItem.push(dailyYes.dailyRewards[yesDayValue])
-//     // res.send(dailyItem)
+   if (req.query.daily == 'yes') {
+    //Need to add a random number generator
+    dailyItem.push(dailyYes.dailyRewards[yesDayValue])
+    // res.send(dailyItem)
  
-//    }
-//    else if (req.query.daily == 'no') {
-//     //get daily rewards item
-//     dailyItem.push(dailyNo.dailyPenalty[noDayValue])
-//     // res.send(dailyItem)
-//    }
+   }
+   else if (req.query.daily == 'no') {
+    //get daily rewards item
+    dailyItem.push(dailyNo.dailyPenalty[noDayValue])
+    // res.send(dailyItem)
+   }
  
-//    if (req.query.weekly == 'yes') {
-//     //get weekly rewards item
-//     weeklyItem.push(weeklyYes.weeklyRewards[yesWeekValue])
-//       // res.send(weeklyItem)
+   if (req.query.weekly == 'yes') {
+    //get weekly rewards item
+    weeklyItem.push(weeklyYes.weeklyRewards[yesWeekValue])
+      // res.send(weeklyItem)
  
-//    }
-//    else if (req.query.weekly == 'no') {
-//     //get weekly rewards item
-//     weeklyItem.push(weeklyNo.weeklyPenalty[noWeekValue])
-//       // res.send(weeklyItem)
-//    }
-//    console.log(dailyItem);
-//    // render daily/weekly items based on quest response
-//    res.render('social', {daily: dailyItem, weekly: weeklyItem});
-//    // res.send("Reached Items route")
+   }
+   else if (req.query.weekly == 'no') {
+    //get weekly rewards item
+    weeklyItem.push(weeklyNo.weeklyPenalty[noWeekValue])
+      // res.send(weeklyItem)
+   }
+   console.log(dailyItem);
+   // render daily/weekly items based on quest response
+   res.render('social2', {daily: dailyItem, weekly: weeklyItem});
+   // res.send("Reached Items route")
  
-//  });
+ });
 
 module.exports = router;

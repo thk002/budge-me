@@ -66,16 +66,21 @@
         <!-- ITEMS TABLE ------------------------------------- -->
         <div id="menu1" class="tab-pane fade">
           <h3>Garden Items</h3>
-          <p>Lists garden items:</p>
+          <p>Click on the name of an item to add it to the garden</p>
+        <div class="panel panel-default">
         <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>Items</th>
-              <th>Image</th>
-              <th>Description</th>
-            </tr>
-          </thead>
+          <div class="panel-heading">
+            <thead>
+              <tr>
+                <th>Items</th>
+                <th>Image</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+          </div>
           <tbody>
+            <% if (daily2[0]) { %>
+
             <tr>
               <td>
               <a href="#" class="useItem"><%= daily2[0].title %></a>
@@ -88,6 +93,8 @@
               </td>
               <br><br>
             </tr>
+            <% } %>
+            <% if (weekly2[0]) { %>
             <tr>
               <td>
               <a href="#" class="useItem"><%= weekly2[0].title %></a>
@@ -99,12 +106,14 @@
               <%= weekly2[0].action %>  
               </td>
             </tr>
+            <% } %>
             <!-- <tr>
               <td>Lettuce</td>
               <td><img src="http://thegraphicsfairy.com/wp-content/uploads/2014/04/Public-Domain-Lettuce-Image-GraphicsFairy1.jpg" alt="" border=3 height=100 width=100></img></td>
             </tr> -->
           </tbody>
         </table>
+        </div>
         <!-- Add image of items, and increment instead of inject -->
         <!-- <table class="table table-bordered"> -->
           <!-- <thead> -->
@@ -146,5 +155,6 @@
         </div>
       </div>
     </div>
+    <script src="js/javascript.js"></script>
   </body>
 </html>

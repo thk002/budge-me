@@ -26,6 +26,10 @@ function teamAdd(e) {
 	document.getElementById("uname").value = '';	
 }
 
+function completeQuest() {
+	ga('send', 'event', 'Quest', 'click');
+}
+
 function projectClick(e) {
 	e.preventDefault();
 	var category = document.getElementById("cname").value;
@@ -47,6 +51,7 @@ function showValue(element, newValue)
 function itemClick() {
 
   event.preventDefault();
+  ga('send', 'event', 'Item', 'click');
   var item = $(this).text();
 
   $.getJSON("/JSON/dailyRewards.json", function(json) { 

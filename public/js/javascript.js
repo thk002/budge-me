@@ -14,6 +14,16 @@ $("#new-cat").click(projectClick);
 $("#newt").click(teamAdd);
 $(".useItem").click(itemClick); 
 
+$(document).ready(function()               
+    {
+        // enter keyd
+        $(document).bind('keypress', function(e) {
+            if(e.keyCode==13){
+                 $('#new-cat').trigger('click');
+                 console.log('New category added.');
+             }
+        });
+        });
 
 }
 

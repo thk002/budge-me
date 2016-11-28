@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/login.css">
     <title>Budge Me</title>
   </head>
   <body>
+    <div>
+    <p></p>
+    <p> </p>
+      <div id="garden-img">
+        <img src="/images/logo.png" id="logo"/>
+      </div>
+      <p></p>
+      <div class="center">
   	<form action="/">
 		Username:
 		<input type="text">
-		Password:
+    <p></p>
+		Password :
 		<input type="password">
-		<a href="/home"><input type="button" value="Submit"></a>
+    <p></p>
+		<a href="/home"><input id="enter" type="button" value="Submit"></a>
 	</form>
+  </div>
+  <script>
+$(document).ready(function()               
+    {
+        // enter keyd
+        $(document).bind('keypress', function(e) {
+            if(e.keyCode==13){
+                 $('#enter').trigger('click');
+                 console.log('login');
+             }
+        });
+        });
+  </script>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

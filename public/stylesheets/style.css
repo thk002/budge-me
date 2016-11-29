@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -8,15 +8,28 @@ a {
 }
 
 #garden-img, #empty-garden {
-	position: relative;
+	left: 50px;
+	top: 100px;
+	position: absolute;
 	width: 1200px;
 	height: 615px;
 }
 
 #newImg {
-	max-width: 130px;
-	max-height: 130px;
+	max-width: 110px;
+	max-height: 110px;
 	position: absolute;
-	top: 30px;
-	left: 50px;
+	top: 140px;
+	left: 80px;
+}
+
+h1 {
+	left: 30px;
+	position: absolute;
+}
+
+h2{
+	left:30px;
+	top: 100px;
+	position: absolute;
 }
